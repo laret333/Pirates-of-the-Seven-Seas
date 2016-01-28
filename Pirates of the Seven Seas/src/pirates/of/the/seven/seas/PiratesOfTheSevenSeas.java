@@ -18,6 +18,11 @@ public class PiratesOfTheSevenSeas {
      */
     public static void main(String[] args) {
         Player playerOne = new Player();
+        
+        playerOne.setName("Captain Steel Eagle");
+        
+        String playerInfo = playerOne.toString();
+        System.out.println(playerInfo);
     }
     
 }
