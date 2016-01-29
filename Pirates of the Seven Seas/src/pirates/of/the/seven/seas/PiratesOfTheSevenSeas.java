@@ -5,10 +5,13 @@
  */
 package pirates.of.the.seven.seas;
 
+import byui.cit260.piratesOfTheSevenSeas.model.Crew;
+import byui.cit260.piratesOfTheSevenSeas.model.Fleet;
 import byui.cit260.piratesOfTheSevenSeas.model.Game;
 import byui.cit260.piratesOfTheSevenSeas.model.Map;
 import byui.cit260.piratesOfTheSevenSeas.model.Pirates;
 import byui.cit260.piratesOfTheSevenSeas.model.Player;
+import byui.cit260.piratesOfTheSevenSeas.model.Ship;
 import java.util.HashSet;
 
 /**
@@ -31,13 +34,13 @@ public class PiratesOfTheSevenSeas {
         System.out.println(playerInfo);
         
         // Game Class
-        Game gameInfo = new Game();
+        //Game gameInfo = new Game();
         
         //gameInfo.setLocation(1,1);
         //gameInfo = enemiesDefeated.toString();
         
 
-        System.out.println(gameInfo);
+        //System.out.println(gameInfo);
         
         // Pirates Class
         Pirates pirateOne = new Pirates();
@@ -107,9 +110,35 @@ public class PiratesOfTheSevenSeas {
         
         
         
+        //fleet Class
+            Fleet fleetInfo = new Fleet();
+            
+            fleetInfo.setCharacterName("Pirate's Booty");
+            fleetInfo.setCharacterStatus("Friend");
         
+            String displayFleetInfo = fleetInfo.toString();
+            System.out.println(displayFleetInfo);
+            
+        //Ship Class
+            Ship shipInfo = new Ship();
+            
+            shipInfo.setShipHealth(0);
         
+            shipInfo.setUpgradeHealth(100);
         
+            String displayShipInfo = shipInfo.toString();
+            System.out.println(displayShipInfo);
+        
+        //Crew Class
+            Crew crewInfo = new Crew();
+            
+                    
+            crewInfo.setNoCrew(10);
+            crewInfo.setExperienceLevel(1);
+            crewInfo.setCrewPoint(10);
+        
+            String displayCrewInfo = crewInfo.toString();
+            System.out.println(displayCrewInfo);
         
         
         
