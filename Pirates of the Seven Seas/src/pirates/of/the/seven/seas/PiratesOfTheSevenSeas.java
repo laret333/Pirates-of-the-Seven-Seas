@@ -12,6 +12,7 @@ import byui.cit260.piratesOfTheSevenSeas.model.Map;
 import byui.cit260.piratesOfTheSevenSeas.model.Pirates;
 import byui.cit260.piratesOfTheSevenSeas.model.Player;
 import byui.cit260.piratesOfTheSevenSeas.model.Ship;
+import java.awt.Point;
 import java.util.HashSet;
 
 /**
@@ -34,12 +35,12 @@ public class PiratesOfTheSevenSeas {
         System.out.println(playerInfo);
         
         // Game Class
-        //Game gameInfo = new Game();
+        Game gameInfo = new Game();
         
-        //gameInfo.setLocation(1,1);
-        //gameInfo = enemiesDefeated.toString();
+        gameInfo.setLocation(new Point(1,1));
+        gameInfo.setEmemiesDefeated(0);
         
-
+        String displayGameInfo = gameInfo.toString();
         //System.out.println(gameInfo);
         
         // Pirates Class
@@ -48,7 +49,7 @@ public class PiratesOfTheSevenSeas {
         
         pirateOne.setName("Pirate 1");
         pirateOne.setPiratePoints(100);
-        //pirateOne.setCoordinates(1, 2);
+        pirateOne.setCoordinates(new Point(1,1));
         pirateOne.setStatus("Enemy");
 
         System.out.println(pirateOne);
@@ -122,7 +123,7 @@ public class PiratesOfTheSevenSeas {
         //Ship Class
             Ship shipInfo = new Ship();
             
-            shipInfo.setShipHealth(0);
+            shipInfo.setShipHealth(100);
         
             shipInfo.setUpgradeHealth(100);
         
