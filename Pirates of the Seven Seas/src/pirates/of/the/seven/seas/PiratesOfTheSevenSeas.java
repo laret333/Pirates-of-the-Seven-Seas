@@ -6,8 +6,10 @@
 package pirates.of.the.seven.seas;
 
 import byui.cit260.piratesOfTheSevenSeas.model.Game;
+import byui.cit260.piratesOfTheSevenSeas.model.Map;
 import byui.cit260.piratesOfTheSevenSeas.model.Pirates;
 import byui.cit260.piratesOfTheSevenSeas.model.Player;
+import java.util.HashSet;
 
 /**
  *
@@ -48,6 +50,14 @@ public class PiratesOfTheSevenSeas {
 
         System.out.println(pirateOne);
         
+        //Map Class
+        Map location = new Map();
+        
+        location.setRowCount(4);
+        location.setColumnCount(5);
+        
+        String mapInfo = location.toString();
+        System.out.println(mapInfo);
     }   
     
 }
