@@ -1,1 +1,1 @@
-# Pirates-of-the-Seven-Seas
+# Pirates-of-the-Seven-Seas project
