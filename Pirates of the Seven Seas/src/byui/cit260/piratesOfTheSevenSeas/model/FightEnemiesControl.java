@@ -31,4 +31,25 @@ public class FightEnemiesControl {
         
 
     }
+    public double fightPirates(int crewPoints, int shipHealth, int cannons) { 
+
+    	
+	if (crewPoints < 1 ) {
+            return -1;
+        }
+        
+        if (shipHealth < 1 ) {
+            return -1;
+        }
+	
+	if (cannons < 1 ) {
+            return -1;
+        }
+        
+	double victoryPoints = crewPoints * (cannons + shipHealth);
+
+	return victoryPoints;
+        
+
+    }
 }

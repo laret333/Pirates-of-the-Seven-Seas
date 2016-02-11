@@ -132,4 +132,107 @@ public class FightEnemiesControlTest {
         //fail("The test case is a prototype.");
     }
     
+    /**
+     * Test of fightPirates method, of class FightEnemiesControl.
+     */
+    @Test
+    public void testFightPirates() {
+        System.out.println("fightPirates");
+        
+        //input values for test case 1
+        System.out.println("\tTest case #1");
+        
+        int crewPoints = 10;
+        int shipHealth = 10;
+        int cannons = 1;
+        
+        double expResult = 110.0;
+        
+        FightEnemiesControl instance = new FightEnemiesControl();
+        
+        double result = instance.fightPirates(crewPoints, shipHealth, cannons);
+        
+        assertEquals(expResult, result, 0.0001);
+        
+        //input values for test case 2
+        System.out.println("\tTest case #2");
+        
+        crewPoints = 0;
+        shipHealth = 2;
+        cannons = 10;
+        
+        expResult = -1;
+        
+        result = instance.fightPirates(crewPoints, shipHealth, cannons);
+        
+        assertEquals(expResult, result, 0.0001);
+        
+        //input values for test case 3
+        System.out.println("\tTest case #3");
+        
+        crewPoints = 10;
+        shipHealth = 2;
+        cannons = 0;
+        
+        expResult = -1;
+        
+        result = instance.fightPirates(crewPoints, shipHealth, cannons);
+        
+        assertEquals(expResult, result, 0.0001);
+        
+        //input values for test case 4
+        System.out.println("\tTest case #4");
+        
+        crewPoints = 10;
+        shipHealth = 0;
+        cannons = 10;
+        
+        expResult = -1;
+        
+        result = instance.fightPirates(crewPoints, shipHealth, cannons);
+        
+        assertEquals(expResult, result, 0.0001);
+        
+        //input values for test case 5
+        System.out.println("\tTest case #5");
+        
+        crewPoints = 1;
+        shipHealth = 10;
+        cannons = 10;
+        
+        expResult = 20;
+        
+        result = instance.fightPirates(crewPoints, shipHealth, cannons);
+        
+        assertEquals(expResult, result, 0.0001);
+        
+        //input values for test case 6
+        System.out.println("\tTest case #6");
+        
+        crewPoints = 10;
+        shipHealth = 2;
+        cannons = 1;
+        
+        expResult = 30;
+        
+        result = instance.fightPirates(crewPoints, shipHealth, cannons);
+        
+        assertEquals(expResult, result, 0.0001);
+        
+        //input values for test case 7
+        System.out.println("\tTest case #7");
+        
+        crewPoints = 10;
+        shipHealth = 1;
+        cannons = 10;
+        
+        expResult = 110;
+        
+        result = instance.fightPirates(crewPoints, shipHealth, cannons);
+        
+        assertEquals(expResult, result, 0.0001);
+    }
+    
 }
+    
+    
