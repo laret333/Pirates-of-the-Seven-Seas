@@ -232,6 +232,107 @@ public class FightEnemiesControlTest {
         
         assertEquals(expResult, result, 0.0001);
     }
+
+    /**
+     * Test of fightNavy method, of class FightEnemiesControl.
+     */
+    @Test
+    public void testFightNavy() {
+        System.out.println("fightNavy");
+        
+        //input values for test case 1
+        System.out.println("\tTest case #1");
+        
+        int crewPoints = 20;
+        int shipHealth = 100;
+        int cannons = 2;
+        
+        double expResult = 2200.0;
+        
+        FightEnemiesControl instance = new FightEnemiesControl();
+        
+        double result = instance.fightNavy(crewPoints, shipHealth, cannons);
+        
+        assertEquals(expResult, result, 0.0001);
+        
+        //input values for test case 2
+        System.out.println("\tTest case #2");
+        
+        crewPoints = 10;
+        shipHealth = 100;
+        cannons = 0;
+        
+        expResult = -1;
+        
+        result = instance.fightNavy(crewPoints, shipHealth, cannons);
+        
+        assertEquals(expResult, result, 0.0001);
+        
+        //input values for test case 3
+        System.out.println("\tTest case #3");
+        
+        crewPoints = 9;
+        shipHealth = 10;
+        cannons = 2;
+        
+        expResult = -1;
+        
+        result = instance.fightNavy(crewPoints, shipHealth, cannons);
+        
+        assertEquals(expResult, result, 0.0001);
+        
+        //input values for test case 4
+        System.out.println("\tTest case #4");
+        
+        crewPoints = 20;
+        shipHealth = 10;
+        cannons = 5;
+        
+        expResult = -1;
+        
+        result = instance.fightNavy(crewPoints, shipHealth, cannons);
+        
+        assertEquals(expResult, result, 0.0001);
+        
+        //input values for test case 5
+        System.out.println("\tTest case #5");
+        
+        crewPoints = 20;
+        shipHealth = 100;
+        cannons = 1;
+        
+        expResult = 2100;
+        
+        result = instance.fightNavy(crewPoints, shipHealth, cannons);
+        
+        assertEquals(expResult, result, 0.0001);
+        
+        //input values for test case 6
+        System.out.println("\tTest case #6");
+        
+        crewPoints = 10;
+        shipHealth = 100;
+        cannons = 2;
+        
+        expResult = 1200;
+        
+        result = instance.fightNavy(crewPoints, shipHealth, cannons);
+        
+        assertEquals(expResult, result, 0.0001);
+        
+        //input values for test case 7
+        System.out.println("\tTest case #7");
+        
+        crewPoints = 10;
+        shipHealth = 100;
+        cannons = 3;
+        
+        expResult = 1300;
+        
+        result = instance.fightNavy(crewPoints, shipHealth, cannons);
+        
+        assertEquals(expResult, result, 0.0001);
+    }
     
 }
     
