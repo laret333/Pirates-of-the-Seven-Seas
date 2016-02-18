@@ -5,6 +5,9 @@
  */
 package citbyui.cit260.PiratesOfTheSevenSeas.view;
 
+import byui.cit260.piratesOfTheSevenSeas.model.Player;
+import java.util.Scanner;
+
 /**
  *
  * @author Tanner
@@ -31,13 +34,46 @@ public class StartProgramView {
     }
         
     private String getPlayersName() {
-        System.out.println("\n*** getPlayersName() called ***");
-        return "Tanner";
+       Scanner keyboard = new Scanner(System.in);
+       String value = ""; //value to be returned
+       boolean valid = false; // initialize to not valid
+       
+       while (!valid) {
+           System.out.println("\n" + this.promptMessage);
+           
+           value = keyboard.nextLine(); // get next line on keyboard
+           value = value.trim(); //trim off unncessary stuff
+           
+           if (value.length() < 1) { //value is blank
+               System.out.println("\nInvalid value: Value cannot be blank");
+               continue;
+               
+           }
+           break;
+       }
+       return value;
     }
 
     private boolean doAction(String playersName) {
-        System.out.println("\n*** doAction() called ***");
-        return true;
+        
+        if (playersName.length() < 2) {
+            System.out.println("\nInvalid players name: "
+                    + "The name must be longer than one character, ye scurvy dog!");
+            return false;
+        }   
+        
+        // call creatPlayer() control funtion
+        Player player = GameControl.createPlayer(playersName);
+        
+        if (player == null) {
+           System.out.println("\nError creating the player.");
+           return false; 
+        }
+        
+        // display next view
+        this.displayNextView();
+        
+        return true; //argh success!
     }    
     
     private String promptMessage;
@@ -73,6 +109,10 @@ public class StartProgramView {
             );
         
         
+    }
+
+    private void displayNextView() {
+        System.out.println("\n*** displayNextView() called ***");
     }
 
     
