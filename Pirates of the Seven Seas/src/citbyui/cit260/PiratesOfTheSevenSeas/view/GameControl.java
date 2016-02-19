@@ -6,6 +6,7 @@
 package citbyui.cit260.PiratesOfTheSevenSeas.view;
 
 import byui.cit260.piratesOfTheSevenSeas.model.Player;
+import pirates.of.the.seven.seas.PiratesOfTheSevenSeas;
 
 /**
  *
@@ -13,9 +14,19 @@ import byui.cit260.piratesOfTheSevenSeas.model.Player;
  */
 class GameControl {
 
-    static Player createPlayer(String playersName) {
-        System.out.println("\n*** createPlayer() function called ***");
-        return new Player();
-    }
+    public static Player createPlayer(String name) {
+        
+        if (name == null) {
+            return null;
+            
+        }
+        
+        Player player = new Player ();
+        player.setName(name);
+        
+        PiratesOfTheSevenSeas.setPlayer(player); //saves the player
+        
+        return player;
     
+    }
 }
