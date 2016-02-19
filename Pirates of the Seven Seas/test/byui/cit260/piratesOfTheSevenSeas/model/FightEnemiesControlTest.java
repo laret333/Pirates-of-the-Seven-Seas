@@ -5,6 +5,7 @@
  */
 package byui.cit260.piratesOfTheSevenSeas.model;
 
+import citbyui.cit260.PiratesOfTheSevenSeas.control.FightEnemiesControl;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

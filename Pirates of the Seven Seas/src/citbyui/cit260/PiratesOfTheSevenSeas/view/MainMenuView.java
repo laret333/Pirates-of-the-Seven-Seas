@@ -5,7 +5,10 @@
  */
 package citbyui.cit260.PiratesOfTheSevenSeas.view;
 
+
+import citbyui.cit260.PiratesOfTheSevenSeas.control.GameControl;
 import java.util.Scanner;
+import pirates.of.the.seven.seas.PiratesOfTheSevenSeas;
 
 /**
  *
@@ -19,13 +22,13 @@ public class MainMenuView {
     public MainMenuView() {
         this.menu = "\n"
                   + "\n--------------------------------------------"
-                  + "\n | Main Menu                               |"
+                  + "\n|                Main Menu                 |"
                   + "\n--------------------------------------------\n"
-                  + "N – New Game\n"
-                  + "L – Load Game\n"
-                  + "S – Save Game\n" 
-                  + "H - Help\n" 
-                  + "Q – Quit" 
+                  + "   N – New Game\n"
+                  + "   L – Load Game\n"
+                  + "   S – Save Game\n" 
+                  + "   H - Help\n" 
+                  + "   Q – Quit" 
                   + "\n--------------------------------------------"
                 ;
                   
@@ -35,13 +38,15 @@ public class MainMenuView {
     
     public void displayMainMenuView() {
         
-        boolean done = false;
+        boolean done = false; // set flag to not done
         do {
             
+            // prompt for and get players name
             String menuOption = this.getMenuOption();
             if (menuOption.toUpperCase().equals("Q"))
                 return;
             
+            // do the requested action and display the next view
             done = this.doAction(menuOption);
             
         } while (!done);
@@ -55,13 +60,13 @@ public class MainMenuView {
        boolean valid = false; // initialize to not valid
        
        while (!valid) {
-           System.out.println("\n" + this.promptMessage);
+           System.out.println("\n" + this.menu);
            
            value = keyboard.nextLine(); // get next line on keyboard
            value = value.trim(); //trim off unncessary stuff
            
            if (value.length() < 1) { //value is blank
-               System.out.println("\nInvalid value: Value cannot be blank");
+               System.out.println("\n*** Captain! Give us some actual instructions! ***");
                continue;
                
            }
@@ -88,7 +93,8 @@ public class MainMenuView {
                this.startHelpMenu();
                break;
             default:
-                System.out.println("\n*** Arg! Ye have chosen that which exists not! *** Belay that choice, and try again!");
+                System.out.println("\n*** Arg! Ye have chosen that which exists not! ***\n"
+                        + "    *** Belay that choice, and try again! ***");
                 break;
        }
        
@@ -96,7 +102,12 @@ public class MainMenuView {
     }
 
     private void startNewGame() {
-        System.out.println("\n*** startNewGame() function called ***");
+       // create new game 
+       GameControl.createNewGame(PiratesOfTheSevenSeas.getPlayer());
+       
+       // display the game menu
+       GameMenuView gameMenu = new GameMenuView();
+       gameMenu.displayMenu();
     }
 
     private void startLoadGame() {

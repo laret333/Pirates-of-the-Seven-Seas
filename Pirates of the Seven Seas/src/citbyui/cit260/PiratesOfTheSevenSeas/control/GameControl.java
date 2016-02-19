@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package citbyui.cit260.PiratesOfTheSevenSeas.view;
+package citbyui.cit260.PiratesOfTheSevenSeas.control;
 
 import byui.cit260.piratesOfTheSevenSeas.model.Player;
 import pirates.of.the.seven.seas.PiratesOfTheSevenSeas;
@@ -12,21 +12,22 @@ import pirates.of.the.seven.seas.PiratesOfTheSevenSeas;
  *
  * @author Tanner
  */
-class GameControl {
+public class GameControl {
+
+    public static void createNewGame(Player player) {
+        System.out.println("\n createNewGame stub function called ");
+    }
 
     public static Player createPlayer(String name) {
-        
         if (name == null) {
             return null;
-            
         }
         
-        Player player = new Player ();
+        Player player = new Player();
         player.setName(name);
-        
-        PiratesOfTheSevenSeas.setPlayer(player); //saves the player
+        PiratesOfTheSevenSeas.setPlayer(player); //save the player
         
         return player;
-    
     }
+    
 }

@@ -5,7 +5,9 @@
  */
 package citbyui.cit260.PiratesOfTheSevenSeas.view;
 
+
 import byui.cit260.piratesOfTheSevenSeas.model.Player;
+import citbyui.cit260.PiratesOfTheSevenSeas.control.GameControl;
 import java.util.Scanner;
 
 /**
@@ -57,8 +59,7 @@ public class StartProgramView {
     private boolean doAction(String playersName) {
         
         if (playersName.length() < 2) {
-            System.out.println("\nInvalid players name: "
-                    + "The name must be longer than one character, ye scurvy dog!");
+            System.out.println("\n*** Give us a name longer than one character, ye scurvy dog! ***");
             return false;
         }   
         
@@ -66,7 +67,7 @@ public class StartProgramView {
         Player player = GameControl.createPlayer(playersName);
         
         if (player == null) {
-           System.out.println("\nError creating the player.");
+           System.out.println("\n*** Give us an actual name, Captain! ***");
            return false; 
         }
         
@@ -81,7 +82,7 @@ public class StartProgramView {
     public StartProgramView() {
         // promptMessage = "Please enter you name"
         // display the banner when the view is created
-        this.promptMessage = "\nPlease enter your name: ";
+        this.promptMessage = "\nCaptain! Under what name shall we fly the colors?: ";
         
         this.displayBanner();
         
@@ -117,10 +118,10 @@ public class StartProgramView {
         
 
     private void displayNextView(Player player) {
-        System.out.println("\n==================================="
-                         + "\n Welcome to the game, " + player.getName() + "!"
+        System.out.println("\n====================================="
+                         + "\n Welcome to the game, Captain " + player.getName() + "!"
                          + "\n Get out there and claim yer seas!"
-                         + "\n===================================");
+                         + "\n=====================================");
         
         // Create MainMenuView object 
         MainMenuView mainMenuView = new MainMenuView();
