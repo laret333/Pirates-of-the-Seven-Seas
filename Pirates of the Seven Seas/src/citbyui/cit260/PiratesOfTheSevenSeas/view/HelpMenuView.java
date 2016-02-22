@@ -5,16 +5,16 @@
  */
 package citbyui.cit260.PiratesOfTheSevenSeas.view;
 
-
-
 /**
  *
  * @author Tanner
  */
-public class GameMenuView {
+class HelpMenuView {
 
-    void displayMenu() {
-        System.out.println("\n displayMenu stub function called ");
+    void displayHelpMenu() {
+        System.out.println("*** displayHelpMenu() function called ***");
     }
- 
+
+    
+    
 }

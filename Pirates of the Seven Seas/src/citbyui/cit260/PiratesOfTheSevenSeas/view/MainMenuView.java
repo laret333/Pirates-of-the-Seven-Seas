@@ -119,7 +119,18 @@ public class MainMenuView {
     }
 
     private void startHelpMenu() {
-        System.out.println("\n*** startHelpMenu() function called ***");
+        // Create MainMenuView object 
+        HelpMenuView helpMenuView = new HelpMenuView();
+
+        //display the help menu
+        HelpMenuView helpMenu = HelpMenuView();
+        helpMenu.displayHelpMenu();
     }
+
+    private HelpMenuView HelpMenuView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
     
 }
