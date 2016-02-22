@@ -123,12 +123,13 @@ public class MainMenuView {
         HelpMenuView helpMenuView = new HelpMenuView();
 
         //display the help menu
-        HelpMenuView helpMenu = HelpMenuView();
-        helpMenu.displayHelpMenu();
+        
+        helpMenuView.displayHelpMenuView();
     }
 
     private HelpMenuView HelpMenuView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n *** helpMenuView () function called *** ");
+        return null;
     }
 
 
