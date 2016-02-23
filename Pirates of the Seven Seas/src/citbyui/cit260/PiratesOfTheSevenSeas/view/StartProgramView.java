@@ -111,11 +111,7 @@ public class StartProgramView {
         
         
     }
-
     
-        
-        
-        
 
     private void displayNextView(Player player) {
         System.out.println("\n====================================="
@@ -123,7 +119,7 @@ public class StartProgramView {
                          + "\n Get out there and claim yer seas!"
                          + "\n=====================================");
         
-        // Create MainMenuView object 
+        // Create ViewMapView object 
         MainMenuView mainMenuView = new MainMenuView();
         
         // Display the main menu view

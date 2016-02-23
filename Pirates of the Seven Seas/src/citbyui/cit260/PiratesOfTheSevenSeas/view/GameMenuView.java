@@ -103,7 +103,11 @@ public class GameMenuView {
     } 
 
     private void viewMap() {
-        System.out.println("\n *** viewMap () function called *** ");
+        // Create ViewMapView object 
+        ViewMapView viewMapView = new ViewMapView();
+        
+        // Display the main menu view
+        viewMapView.displayViewMapView();
     }
 
     private void viewCrew() {
