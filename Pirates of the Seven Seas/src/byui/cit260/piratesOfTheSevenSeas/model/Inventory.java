@@ -13,31 +13,31 @@ import java.util.Objects;
  * @author jtemerson
  */
 public class Inventory implements Serializable{
-    private String gold;
-    private String food;
-    private String cannons;
+    private int gold;
+    private int food;
+    private int cannons;
 
-    public String getGold() {
+    public int getGold() {
         return gold;
     }
 
-    public void setGold(String gold) {
+    public void setGold(int gold) {
         this.gold = gold;
     }
 
-    public String getFood() {
+    public int getFood() {
         return food;
     }
 
-    public void setFood(String food) {
+    public void setFood(int food) {
         this.food = food;
     }
 
-    public String getCannons() {
+    public int getCannons() {
         return cannons;
     }
 
-    public void setCannons(String cannons) {
+    public void setCannons(int cannons) {
         this.cannons = cannons;
     }
 

@@ -21,7 +21,9 @@ public class ViewMapView {
                   + "\n|                View Map                 |"
                   + "\n--------------------------------------------\n"
                   + "   T – Travel to\n"
-                  + "   E – Explore\n" 
+                  + "   E – Explore\n"
+                  + "   F – Fight Local Pirates\n"
+                  + "   P – Plunder passing Trading Ship\n"
                   + "   Q – Quit" 
                   + "\n--------------------------------------------"
                 ;
@@ -76,6 +78,12 @@ public class ViewMapView {
             case"E":
                this.explore();
                break;
+            case"F":
+               this.fightPirates();
+               break;
+            case"P":
+               this.plunderTrading();
+               break;
             
             default:
                 System.out.println("\n*** Arg! Ye have chosen that which exists not! ***\n"
@@ -88,10 +96,30 @@ public class ViewMapView {
     
   
     private void travelTo() {
-        System.out.println("\n*** startTravelTo() function called ***");
+        // Create TravelToView object 
+        TravelToView travelToView = new TravelToView();
+        
+        // Display the TravelToView
+        travelToView.displayTravelToView();
     }
 
     private void explore() {
         System.out.println("\n*** startexplore() function called ***");
+    }
+
+    private void fightPirates() {
+        // Create TravelToView object 
+        FightPiratesView fightPiratesView = new FightPiratesView();
+        
+        // Display the TravelToView
+        fightPiratesView.displayFightPiratesView();
+    }
+
+    private void plunderTrading() {
+        // Create TravelToView object 
+        PlunderTrading plunderTrading = new PlunderTrading();
+        
+        // Display the TravelToView
+        plunderTrading.displayPlunderTrading();
     }
 }
