@@ -21,7 +21,7 @@ public class ViewMapView {
                   + "\n|                View Map                 |"
                   + "\n--------------------------------------------\n"
                   + "   T – Travel to\n"
-                  + "   E – Explore\n"
+                  + "   E – Expl     ore\n"
                   + "   F – Fight Local Pirates\n"
                   + "   P – Plunder passing Trading Ship\n"
                   + "   Q – Quit" 
