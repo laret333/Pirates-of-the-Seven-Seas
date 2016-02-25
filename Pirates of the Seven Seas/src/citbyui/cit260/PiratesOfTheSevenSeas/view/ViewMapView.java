@@ -21,7 +21,7 @@ public class ViewMapView {
                   + "\n|                View Map                 |"
                   + "\n--------------------------------------------\n"
                   + "   T – Travel to\n"
-                  + "   E – Expl     ore\n"
+                  + "   E – Explore\n"
                   + "   F – Fight Local Pirates\n"
                   + "   P – Plunder passing Trading Ship\n"
                   + "   Q – Quit" 
@@ -33,7 +33,7 @@ public class ViewMapView {
         boolean done = false; // set flag to not done
         do {
             
-            // prompt for and get players name
+            // get mapOption
             String viewMapOption = this.getViewMapOption();
             if (viewMapOption.toUpperCase().equals("Q"))
                 return;

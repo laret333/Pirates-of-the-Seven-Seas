@@ -106,7 +106,7 @@ public class GameMenuView {
         // Create ViewMapView object 
         ViewMapView viewMapView = new ViewMapView();
         
-        // Display the main menu view
+        // Display the view map view
         viewMapView.displayViewMapView();
     }
 
