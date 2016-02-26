@@ -117,9 +117,9 @@ public class ViewMapView {
 
     private void plunderTrading() {
         // Create TravelToView object 
-        PlunderTrading plunderTrading = new PlunderTrading();
+        PlunderTradingView plunderTradingView = new PlunderTradingView();
         
         // Display the TravelToView
-        plunderTrading.displayPlunderTrading();
+        plunderTradingView.displayPlunderTradingView();
     }
 }

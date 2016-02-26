@@ -8,12 +8,11 @@ package citbyui.cit260.PiratesOfTheSevenSeas.view;
 import citbyui.cit260.PiratesOfTheSevenSeas.control.FightEnemiesControl;
 import java.util.Scanner;
 
-
 /**
  *
  * @author Tanner
  */
-class FightPiratesView {
+class PlunderTradingView {
 
     private String promptMessage;
     private String cannonsQuestion;
@@ -22,11 +21,11 @@ class FightPiratesView {
     private int shipHealth = 100;
     private int upgradeShip = 100;
 
-    public FightPiratesView() {
+    public PlunderTradingView() {
         this.promptMessage = "\n"
                   + "\n--------------------------------------------\n"
-                  + "Look Captain!\n"
-                  + "There is an enemy pirate in our midst!\n"
+                  + "Ahoy, Captain!\n"
+                  + "There is a local trading ship in our midst!\n"
                   + "The ship looks basic enough, but let's\n"
                   + "check out resources and decide how much\n"
                   + "we need to use in order to win the fight!\n\n"
@@ -44,9 +43,8 @@ class FightPiratesView {
                 + "How many cannons do you want in battle?\n"  
                 ;
     }
-    
-    
-       void displayFightPiratesView() {
+
+    void displayPlunderTradingView() {
         // this part is for crew
             boolean crewDone = false; // set flag to not done
             do {
@@ -60,12 +58,9 @@ class FightPiratesView {
                 crewDone = this.doAction(viewCrewPointsInput);
 
             } while (!crewDone);
-
-      
     }
-   
-    //this part is for getting the crew       
-   private String getInput() {
+
+    private String getInput() {
        Scanner keyboard = new Scanner(System.in);
 
        String crewValue = ""; //value to be returned
@@ -87,8 +82,8 @@ class FightPiratesView {
     
 
 }
-    
-   private boolean doAction(String crewString) {
+
+    private boolean doAction(String crewString) {
        
        int crewInt = Integer.parseInt(crewString);
        
@@ -97,7 +92,7 @@ class FightPiratesView {
        String viewCannonsInput = this.getInput();
        int cannonsInt = Integer.parseInt(viewCannonsInput);
        
-       int victoryPoints = FightEnemiesControl.fightPirates(crewInt, cannonsInt);
+       double victoryPoints = FightEnemiesControl.plunderTrading(crewInt, cannonsInt);
        
        if (victoryPoints > 1019) {
            System.out.println("\n\nCongrats, Captain! We've won our first battle!!!");
@@ -119,6 +114,8 @@ class FightPiratesView {
        
        return false;
     } 
+                
     }
+
     
 
