@@ -16,7 +16,7 @@ public class FightEnemiesControl {
 
     private static int crewPoints;
     private static int cannons;
-    public static double indiansFound(int gold, int food, int cannons) { 
+    public static int indiansFound(int gold, int food, int cannons) { 
 
     	
 	if (gold < 1 ) {
@@ -31,7 +31,7 @@ public class FightEnemiesControl {
             return -1;
         }
         
-	double victoryPoints = gold * (food + cannons);
+	int victoryPoints = gold * (food + cannons);
 
 	return victoryPoints;
         
@@ -67,7 +67,7 @@ public class FightEnemiesControl {
         
 
     }
-    public static double fightNavy(int crewPoints, int shipHealth, int cannons) {
+    public static int fightNavy(int crewPoints, int shipHealth, int cannons) {
 
     	
 	if (shipHealth < 100 ) {
@@ -82,7 +82,7 @@ public class FightEnemiesControl {
             return -1;
         }
         
-	double victoryPoints = shipHealth * (crewPoints + cannons);
+	int victoryPoints = shipHealth * (crewPoints + cannons);
  	return victoryPoints;
         
 
@@ -122,7 +122,7 @@ public class FightEnemiesControl {
             return -1;
         }
         
-	double victoryPoints = crewPoints * (cannons + shipHealth);
+	int victoryPoints = crewPoints * (cannons + shipHealth);
 
 	return victoryPoints;
     }

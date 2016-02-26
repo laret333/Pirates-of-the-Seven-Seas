@@ -32,11 +32,11 @@ public class FightEnemiesControlTest {
         int food = 10;
         int cannons = 1;
         
-        double expResult = 110.0;
+        int expResult = 110;
         
         FightEnemiesControl instance = new FightEnemiesControl();
         
-        double result = instance.indiansFound(gold, food, cannons);
+        int result = instance.indiansFound(gold, food, cannons);
         
         assertEquals(expResult, result, 0.0001);
         
@@ -144,16 +144,16 @@ public class FightEnemiesControlTest {
         System.out.println("\tTest case #1");
         
         int crewPoints = 10;
-        int shipHealth = 10;
-        int cannons = 1;
+        int shipHealth = 1;
+        int cannons = 10;
         
-        double expResult = 110.0;
+        int expResult = 110;
         
         FightEnemiesControl instance = new FightEnemiesControl();
         
         int result = instance.fightPirates(crewPoints, cannons);
         
-        assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0);
         
         //input values for test case 2
         System.out.println("\tTest case #2");
@@ -166,7 +166,7 @@ public class FightEnemiesControlTest {
         
         result = instance.fightPirates(crewPoints, cannons);
         
-        assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0);
         
         //input values for test case 3
         System.out.println("\tTest case #3");
@@ -179,7 +179,7 @@ public class FightEnemiesControlTest {
         
         result = instance.fightPirates(crewPoints, cannons);
         
-        assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0);
         
         //input values for test case 4
         System.out.println("\tTest case #4");
@@ -192,7 +192,7 @@ public class FightEnemiesControlTest {
         
         result = instance.fightPirates(crewPoints, cannons);
         
-        assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0);
         
         //input values for test case 5
         System.out.println("\tTest case #5");
@@ -205,7 +205,7 @@ public class FightEnemiesControlTest {
         
         result = instance.fightPirates(crewPoints, cannons);
         
-        assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0);
         
         //input values for test case 6
         System.out.println("\tTest case #6");
@@ -218,7 +218,7 @@ public class FightEnemiesControlTest {
         
         result = instance.fightPirates(crewPoints, cannons);
         
-        assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0);
         
         //input values for test case 7
         System.out.println("\tTest case #7");
@@ -231,7 +231,7 @@ public class FightEnemiesControlTest {
         
         result = instance.fightPirates(crewPoints, cannons);
         
-        assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0);
     }
 
     /**
@@ -248,11 +248,11 @@ public class FightEnemiesControlTest {
         int shipHealth = 100;
         int cannons = 2;
         
-        double expResult = 2200.0;
+        int expResult = 2200;
         
         FightEnemiesControl instance = new FightEnemiesControl();
         
-        double result = instance.fightNavy(crewPoints, shipHealth, cannons);
+        int result = instance.fightNavy(crewPoints, shipHealth, cannons);
         
         assertEquals(expResult, result, 0.0001);
         
@@ -267,7 +267,7 @@ public class FightEnemiesControlTest {
         
         result = instance.fightNavy(crewPoints, shipHealth, cannons);
         
-        assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0);
         
         //input values for test case 3
         System.out.println("\tTest case #3");
@@ -280,7 +280,7 @@ public class FightEnemiesControlTest {
         
         result = instance.fightNavy(crewPoints, shipHealth, cannons);
         
-        assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0);
         
         //input values for test case 4
         System.out.println("\tTest case #4");
@@ -293,7 +293,7 @@ public class FightEnemiesControlTest {
         
         result = instance.fightNavy(crewPoints, shipHealth, cannons);
         
-        assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0);
         
         //input values for test case 5
         System.out.println("\tTest case #5");
@@ -306,7 +306,7 @@ public class FightEnemiesControlTest {
         
         result = instance.fightNavy(crewPoints, shipHealth, cannons);
         
-        assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0);
         
         //input values for test case 6
         System.out.println("\tTest case #6");
@@ -319,7 +319,7 @@ public class FightEnemiesControlTest {
         
         result = instance.fightNavy(crewPoints, shipHealth, cannons);
         
-        assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0);
         
         //input values for test case 7
         System.out.println("\tTest case #7");
@@ -332,7 +332,7 @@ public class FightEnemiesControlTest {
         
         result = instance.fightNavy(crewPoints, shipHealth, cannons);
         
-        assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0);
     }
     
 }
