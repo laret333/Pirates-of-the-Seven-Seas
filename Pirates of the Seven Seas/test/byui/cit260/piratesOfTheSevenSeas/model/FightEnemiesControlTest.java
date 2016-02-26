@@ -151,7 +151,7 @@ public class FightEnemiesControlTest {
         
         FightEnemiesControl instance = new FightEnemiesControl();
         
-        double result = instance.fightPirates(crewPoints, shipHealth, cannons);
+        int result = instance.fightPirates(crewPoints, cannons);
         
         assertEquals(expResult, result, 0.0001);
         
@@ -164,7 +164,7 @@ public class FightEnemiesControlTest {
         
         expResult = -1;
         
-        result = instance.fightPirates(crewPoints, shipHealth, cannons);
+        result = instance.fightPirates(crewPoints, cannons);
         
         assertEquals(expResult, result, 0.0001);
         
@@ -177,7 +177,7 @@ public class FightEnemiesControlTest {
         
         expResult = -1;
         
-        result = instance.fightPirates(crewPoints, shipHealth, cannons);
+        result = instance.fightPirates(crewPoints, cannons);
         
         assertEquals(expResult, result, 0.0001);
         
@@ -190,7 +190,7 @@ public class FightEnemiesControlTest {
         
         expResult = -1;
         
-        result = instance.fightPirates(crewPoints, shipHealth, cannons);
+        result = instance.fightPirates(crewPoints, cannons);
         
         assertEquals(expResult, result, 0.0001);
         
@@ -203,7 +203,7 @@ public class FightEnemiesControlTest {
         
         expResult = 20;
         
-        result = instance.fightPirates(crewPoints, shipHealth, cannons);
+        result = instance.fightPirates(crewPoints, cannons);
         
         assertEquals(expResult, result, 0.0001);
         
@@ -216,7 +216,7 @@ public class FightEnemiesControlTest {
         
         expResult = 30;
         
-        result = instance.fightPirates(crewPoints, shipHealth, cannons);
+        result = instance.fightPirates(crewPoints, cannons);
         
         assertEquals(expResult, result, 0.0001);
         
@@ -229,7 +229,7 @@ public class FightEnemiesControlTest {
         
         expResult = 110;
         
-        result = instance.fightPirates(crewPoints, shipHealth, cannons);
+        result = instance.fightPirates(crewPoints, cannons);
         
         assertEquals(expResult, result, 0.0001);
     }
