@@ -67,7 +67,7 @@ public class GameMenuView {
                System.out.println("\n*** Captain! Give us some actual instructions! ***");
                continue;
                
-           }
+           } 
            break;
        }
        return value;

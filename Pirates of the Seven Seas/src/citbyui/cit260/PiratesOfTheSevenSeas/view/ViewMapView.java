@@ -61,7 +61,7 @@ public class ViewMapView {
                System.out.println("\n*** Captain! Give us some actual instructions! ***");
                continue;
                
-           }
+           } 
            break;
        }
        return value;
