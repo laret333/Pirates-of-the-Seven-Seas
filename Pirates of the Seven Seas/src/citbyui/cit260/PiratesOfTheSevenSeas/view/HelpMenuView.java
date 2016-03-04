@@ -11,14 +11,13 @@ import java.util.Scanner;
  *
  * @author Tanner
  */
-public class HelpMenuView {
+public class HelpMenuView extends View{
 
-    private String helpMenu;
    
     
 
     public HelpMenuView() {
-        this.helpMenu = "\n"
+        super( "\n"
                   + "\n--------------------------------------------"
                   + "\n|                Help Menu                 |"
                   + "\n--------------------------------------------\n"
@@ -28,54 +27,16 @@ public class HelpMenuView {
                   + "   S - Ship and Fleet - How to maintain and upgrade\n" 
                   + "   M – Map - How to navigate" 
                   + "\n--------------------------------------------"
-                ;
+        );
                   
     }
     
-    public void displayHelpMenuView() {
-        
-        boolean done = false; // set flag to not done
-        do {
-            
-            // prompt for and get players name
-            String helpMenuOption = this.getHelpMenuOption();
-            if (helpMenuOption.toUpperCase().equals("Q"))
-                return;
-            
-            // do the requested action and display the next view
-            done = this.doAction(helpMenuOption);
-            
-        } while (!done);
-        
-        
-    }
+   
     
-    private String getHelpMenuOption() {
-       Scanner keyboard = new Scanner(System.in);
-       String value = ""; //value to be returned
-       boolean valid = false; // initialize to not valid
+    public boolean doAction(String value) {
+       value = value.toUpperCase();
        
-       while (!valid) {
-           System.out.println("\n" + this.helpMenu);
-           
-           value = keyboard.nextLine(); // get next line on keyboard
-           value = value.trim(); //trim off unncessary stuff
-           
-           if (value.length() < 1) { //value is blank
-               System.out.println("\n*** Captain! Give us some actual instructions! ***");
-               continue;
-               
-           }
-           break;
-       }
-       return value;
-        
-    }
-    
-    private boolean doAction(String choice) {
-       choice = choice.toUpperCase();
-       
-       switch (choice) {
+       switch (value) {
            case "O":
                this.overviewOfGame();
                break;
@@ -118,6 +79,10 @@ public class HelpMenuView {
 
     private void mapMovement() {
         System.out.println("\n*** mapMovement() function called ***");
+    }
+
+    void displayMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
  

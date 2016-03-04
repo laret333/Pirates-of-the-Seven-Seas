@@ -11,12 +11,11 @@ import java.util.Scanner;
  *
  * @author jtemerson
  */
-public class ViewMapView {
+public class ViewMapView extends View{
     
-    private String menu;
     
     public ViewMapView() {
-        this.menu = "\n"
+        super( "\n"
                   + "\n--------------------------------------------"
                   + "\n|                View Map                 |"
                   + "\n--------------------------------------------\n"
@@ -26,52 +25,13 @@ public class ViewMapView {
                   + "   P – Plunder passing Trading Ship\n"
                   + "   Q – Quit" 
                   + "\n--------------------------------------------"
-                ;
+        );
     }
-    void displayViewMapView() {
-        
-        boolean done = false; // set flag to not done
-        do {
-            
-            // get mapOption
-            String viewMapOption = this.getViewMapOption();
-            if (viewMapOption.toUpperCase().equals("Q"))
-                return;
-            
-            // do the requested action and display the next view
-            done = this.doAction(viewMapOption);
-            
-        } while (!done);
-        
-        
-    }
-   
-   private String getViewMapOption() {
-       Scanner keyboard = new Scanner(System.in);
-       String value = ""; //value to be returned
-       boolean valid = false; // initialize to not valid
+    @Override
+   public boolean doAction(String value) {
+       value = value.toUpperCase();
        
-       while (!valid) {
-           System.out.println("\n" + this.menu);
-           
-           value = keyboard.nextLine(); // get next line on keyboard
-           value = value.trim(); //trim off unncessary stuff
-           
-           if (value.length() < 1) { //value is blank
-               System.out.println("\n*** Captain! Give us some actual instructions! ***");
-               continue;
-               
-           } 
-           break;
-       }
-       return value;
-        
-    }
-    
-   private boolean doAction(String choice) {
-       choice = choice.toUpperCase();
-       
-       switch (choice) {
+       switch (value) {
            case "T":
                this.travelTo();
                break;
@@ -100,7 +60,7 @@ public class ViewMapView {
         TravelToView travelToView = new TravelToView();
         
         // Display the TravelToView
-        travelToView.displayTravelToView();
+        travelToView.displayMenu();
     }
 
     private void explore() {
@@ -108,18 +68,61 @@ public class ViewMapView {
     }
 
     private void fightPirates() {
+     
+     int crewPoints = 10;
+     int shipHealth = 100;
+     int upgradeShip = 100;
+        
         // Create TravelToView object 
-        FightPiratesView fightPiratesView = new FightPiratesView();
+        FightPiratesView fightPiratesView = new FightPiratesView("\n"
+                  + "\n--------------------------------------------\n"
+                  + "Look Captain!\n"
+                  + "There is an enemy pirate in our midst!\n"
+                  + "The ship looks basic enough, but let's\n"
+                  + "check out resources and decide how much\n"
+                  + "we need to use in order to win the fight!\n\n"
+                  + "If you choose to use all your resources,\n"
+                  + "there's a greater chance that you win, \n"  
+                  + "but you risk losing or damaging those\n"
+                  + "items!\n\n"
+         
+                  +"Your ship health is " + shipHealth + " out of " + upgradeShip + ".\n\n"
+                  + "You have " + crewPoints + " crew members avaiable to fight!\n\n"
+                  
+                  + "How many crew members do you want in battle?\n" );
         
         // Display the TravelToView
-        fightPiratesView.displayFightPiratesView();
     }
 
     private void plunderTrading() {
         // Create TravelToView object 
-        PlunderTradingView plunderTradingView = new PlunderTradingView();
+        
+        int crewPoints = 10;
+        int shipHealth = 100;
+        int upgradeShip = 100;
+        
+        PlunderTradingView plunderTradingView = new PlunderTradingView("\n"
+                  + "\n--------------------------------------------\n"
+                  + "Ahoy, Captain!\n"
+                  + "There is a local trading ship in our midst!\n"
+                  + "The ship looks basic enough, but let's\n"
+                  + "check out resources and decide how much\n"
+                  + "we need to use in order to win the fight!\n\n"
+                  + "If you choose to use all your resources,\n"
+                  + "there's a greater chance that you win, \n"  
+                  + "but you risk losing or damaging those\n"
+                  + "items!\n\n"
+                  + "Your ship health is " + shipHealth + " out of " + upgradeShip + ".\n\n"
+                  + "You have " + crewPoints + " crew members avaiable to fight!\n\n"
+                  
+                  + "How many crew members do you want in battle?\n"
+                );
         
         // Display the TravelToView
-        plunderTradingView.displayPlunderTradingView();
+        plunderTradingView.display();
+    }
+
+    void displayMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
