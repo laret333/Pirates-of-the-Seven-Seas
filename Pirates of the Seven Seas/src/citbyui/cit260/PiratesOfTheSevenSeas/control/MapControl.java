@@ -10,7 +10,7 @@ package citbyui.cit260.PiratesOfTheSevenSeas.control;
 import byui.cit260.piratesOfTheSevenSeas.model.Game;
 import byui.cit260.piratesOfTheSevenSeas.model.Location;
 import byui.cit260.piratesOfTheSevenSeas.model.Map;
-import byui.cit260.piratesOfTheSevenSeas.model.Pirates;
+import byui.cit260.piratesOfTheSevenSeas.model.Pirate;
 import byui.cit260.piratesOfTheSevenSeas.model.RandomScene;
 import byui.cit260.piratesOfTheSevenSeas.model.SceneIndex;
 import pirates.of.the.seven.seas.PiratesOfTheSevenSeas;
@@ -68,7 +68,7 @@ public class MapControl {
         
     }
 
-    static void movePiratesToStartingLocation(Map map, Pirates[] actors) {
+    static void movePiratesToStartingLocation(Map map, Pirate[] actors) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

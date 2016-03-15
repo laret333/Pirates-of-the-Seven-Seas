@@ -16,9 +16,10 @@ import java.util.Objects;
 public class Game implements Serializable{
     
     private Player player;
-    private Integer ememiesDefeated;
+    private Integer ememiesDefeated; 
     private Point location;
     private Item[] items;
+    private Pirate[] pirates;
     private Map map;
 
     public Game() {
@@ -64,6 +65,14 @@ public class Game implements Serializable{
 
     public void setMap(Map map) {
         this.map = map;
+    }
+
+    public Pirate[] getPirates() {
+        return pirates;
+    }
+
+    public void setPirates(Pirate[] pirates) {
+        this.pirates = pirates;
     }
     
     

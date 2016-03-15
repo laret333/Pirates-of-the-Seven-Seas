@@ -10,7 +10,7 @@ import byui.cit260.piratesOfTheSevenSeas.model.Game;
 import byui.cit260.piratesOfTheSevenSeas.model.Item;
 import byui.cit260.piratesOfTheSevenSeas.model.ItemIndex;
 import byui.cit260.piratesOfTheSevenSeas.model.Map;
-import byui.cit260.piratesOfTheSevenSeas.model.Pirates;
+import byui.cit260.piratesOfTheSevenSeas.model.Pirate;
 import byui.cit260.piratesOfTheSevenSeas.model.Player;
 
 import pirates.of.the.seven.seas.PiratesOfTheSevenSeas;
@@ -23,7 +23,8 @@ import pirates.of.the.seven.seas.PiratesOfTheSevenSeas;
 
 
 public class GameControl {
-    
+
+
   
     
     public GameControl() {
@@ -61,9 +62,10 @@ public static Player createPlayer(String name) {
        game.setMap(map); // save map in game
 
        // move actors to starting position in the map
-      Pirates[] actors = Pirates.createPirates();
+      Pirate[] pirates = GameControl.createPirates();
+      game.setPirates(pirates);
        
-       MapControl.movePiratesToStartingLocation(map, actors);    
+       MapControl.movePiratesToStartingLocation(map, pirates);    
     }
  
     
@@ -87,6 +89,11 @@ public static Player createPlayer(String name) {
         return inventory;
     }
     
+    
+    private static Pirate[] createPirates() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+        
   
    
     

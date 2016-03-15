@@ -5,7 +5,7 @@
  */
 package citbyui.cit260.PiratesOfTheSevenSeas.control;
 
-import byui.cit260.piratesOfTheSevenSeas.model.Pirates;
+import byui.cit260.piratesOfTheSevenSeas.model.Pirate;
 import byui.cit260.piratesOfTheSevenSeas.model.Ship;
 
 /**
@@ -88,7 +88,7 @@ public class FightEnemiesControl {
 
     }
     
-    public static int awardVictoryPoints(int victoryPoints, Pirates pirate) {
+    public static int awardVictoryPoints(int victoryPoints, Pirate pirate) {
      
         System.out.println("\n *** awardVictoryPoints stub function called *** ");
         
