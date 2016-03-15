@@ -17,6 +17,7 @@ public class Location implements Serializable{
     private Integer column;
     private String charted;
     private String uncharted;
+    private RandomScene scene;
 
     public Integer getRow() {
         return row;
@@ -49,6 +50,16 @@ public class Location implements Serializable{
     public void setUncharted(String uncharted) {
         this.uncharted = uncharted;
     }
+
+    public RandomScene getScene() {
+        return scene;
+    }
+
+    public void setScene(RandomScene scene) {
+        this.scene = scene;
+    }
+    
+    
 
     @Override
     public int hashCode() {

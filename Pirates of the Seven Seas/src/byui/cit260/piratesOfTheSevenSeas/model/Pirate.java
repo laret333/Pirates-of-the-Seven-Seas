@@ -13,14 +13,15 @@ import java.util.Objects;
  *
  * @author Tanner
  */
-public class Pirates implements Serializable{
+public class Pirate implements Serializable{
+
     
     private String name;
     private Integer piratePoints;
     private Point coordinates;
     private String status;
 
-    public Pirates() {
+    public Pirate() {
     }
     
     
@@ -78,7 +79,7 @@ public class Pirates implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Pirates other = (Pirates) obj;
+        final Pirate other = (Pirate) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }

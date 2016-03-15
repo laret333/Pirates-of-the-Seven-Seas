@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author jtemerson
  */
-public class Items implements Serializable{
+public class Item implements Serializable{
     private String name;
     private Integer price;
     private String attribute;
@@ -61,7 +61,7 @@ public class Items implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Items other = (Items) obj;
+        final Item other = (Item) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
@@ -81,7 +81,7 @@ public class Items implements Serializable{
 
     
     
-    public Items() {
+    public Item() {
     }
     
     
