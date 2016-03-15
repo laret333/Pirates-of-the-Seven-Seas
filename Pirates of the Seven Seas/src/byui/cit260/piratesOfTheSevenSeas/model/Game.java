@@ -14,8 +14,12 @@ import java.util.Objects;
  * @author Tanner
  */
 public class Game implements Serializable{
+    
+    private Player player;
     private Integer ememiesDefeated;
     private Point location;
+    private Item[] items;
+    private Map map;
 
     public Game() {
     }
@@ -37,6 +41,33 @@ public class Game implements Serializable{
     public void setLocation(Point location) {
         this.location = location;
     }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Item[] getItems() {
+        return items;
+    }
+
+    public void setItems(Item[] items) {
+        this.items = items;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+    
+    
+    
 
     @Override
     public int hashCode() {

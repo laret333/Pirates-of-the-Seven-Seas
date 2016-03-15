@@ -14,6 +14,10 @@ import java.util.Objects;
  * @author Tanner
  */
 public class Pirates implements Serializable{
+
+    public static Pirates[] createPirates() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     private String name;
     private Integer piratePoints;

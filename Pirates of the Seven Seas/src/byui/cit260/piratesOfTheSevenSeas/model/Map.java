@@ -3,53 +3,99 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package byui.cit260.piratesOfTheSevenSeas.model;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *
- * @author Tanner
+ * @author jacksonrkj
  */
-public class Map implements Serializable{
-    private Integer rowCount;
-    private Integer columnCount;
 
-    public Map() {
+
+public class Map implements Serializable {
+    
+    private int noOfRows;
+    private int noOfColumns;
+    private Location[][] locations;
+
+    public Map() {     
+    }
+    
+    public Map(int noOfRows, int noOfColumns) {
+        
+        if (noOfRows < 1 || noOfColumns < 1) {
+            System.out.println("The number of rows and columns must be > zero");
+            return;
+        }
+        
+        this.noOfRows = noOfRows;
+        this.noOfColumns = noOfColumns;
+        
+        // create 2-D array for Location objects
+        this.locations = new Location[noOfRows][noOfColumns];
+        
+        for (int row = 0; row < noOfRows; row++) {
+            for(int column = 0; column < noOfColumns; column++) {
+                // create and initialize new Location object instance
+                Location location = new Location();
+                location.setColumn(column);
+                location.setRow(row);
+                location.setCharted("1");
+                location.setUncharted("6");
+                
+                
+                // assign the Location object to the current position in array
+                locations[row][column] = location;          
+            }
+        }
+    }
+
+    
+    
+    public long getNoOfRows() {
+        return noOfRows;
+    }
+
+    public void setNoOfRows(int noOfRows) {
+        this.noOfRows = noOfRows;
+    }
+
+    public long getNoOfColumns() {
+        return noOfColumns;
+    }
+
+    public void setNoOfColumns(int noOfColumns) {
+        this.noOfColumns = noOfColumns;
+    }
+
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
     }
     
     
+    
 
-    public Integer getRowCount() {
-        return rowCount;
-    }
-
-    public void setRowCount(Integer rowCount) {
-        this.rowCount = rowCount;
-    }
-
-    public Integer getColumnCount() {
-        return columnCount;
-    }
-
-    public void setColumnCount(Integer columnCount) {
-        this.columnCount = columnCount;
+    @Override
+    public String toString() {
+        return "Map{" + "rowCount=" + noOfRows + ", columnCount=" + noOfColumns + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 37 * hash + Objects.hashCode(this.rowCount);
-        hash = 37 * hash + Objects.hashCode(this.columnCount);
+        hash = 37 * hash + (int) (this.noOfRows ^ (this.noOfRows >>> 32));
+        hash = 37 * hash + (int) (this.noOfColumns ^ (this.noOfColumns >>> 32));
         return hash;
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
         if (obj == null) {
             return false;
         }
@@ -57,19 +103,15 @@ public class Map implements Serializable{
             return false;
         }
         final Map other = (Map) obj;
-        if (!Objects.equals(this.rowCount, other.rowCount)) {
+        if (this.noOfRows != other.noOfRows) {
             return false;
         }
-        if (!Objects.equals(this.columnCount, other.columnCount)) {
+        if (this.noOfColumns != other.noOfColumns) {
             return false;
         }
         return true;
     }
-
-    @Override
-    public String toString() {
-        return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
-    }
+    
     
     
 }
