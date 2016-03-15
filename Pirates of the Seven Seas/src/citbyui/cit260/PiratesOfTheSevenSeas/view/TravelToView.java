@@ -9,12 +9,12 @@ package citbyui.cit260.PiratesOfTheSevenSeas.view;
  *
  * @author Tanner
  */
-public class TravelToView extends View{
+public class TravelToView {
     
     private String map;
     
     public TravelToView() {
-        super("\n"
+        this.map = "\n"
                   + "\n-------------------------------------------"
                   + "\n|  1  |  2  |  3  |  4  |  5  |  6  |  7  |"
                   + "\n--------------------------------------------\n"
@@ -22,15 +22,10 @@ public class TravelToView extends View{
                   + "   E – Explore\n" 
                   + "   Q – Quit" 
                   + "\n--------------------------------------------"
-        );
+                ;
     }
 
-    @Override
-    public boolean doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void displayMenu() {
+    void displayTravelToView() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

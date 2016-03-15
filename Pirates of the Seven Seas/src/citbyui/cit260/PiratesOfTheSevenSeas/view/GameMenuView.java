@@ -13,12 +13,13 @@ import java.util.Scanner;
  *
  * @author Tanner
  */
-public class GameMenuView extends View{
+public class GameMenuView {
 
+    private String gameMenu;
     
     public GameMenuView() {
         
-        super( "\n"
+        this.gameMenu = "\n"
                   + "\n--------------------------------------------"
                   + "\n|                Game Menu                 |"
                   + "\n--------------------------------------------\n"
@@ -29,14 +30,54 @@ public class GameMenuView extends View{
                   + "   S – View Ship\n"
                   + "   Q - Return                                 "  
                   + "\n--------------------------------------------"
-        );
-    }
+                ;
         
-    @Override
-     public boolean doAction(String value) {
-       value = value.toUpperCase();
+        
+        
+        
+    }
+    
+    public void displayGameMenu() {
+        boolean done = false; // set flag to not done
+        do {
+            
+            // prompt for and get players name
+            String gameMenuOption = this.getGameMenuOption();
+            if (gameMenuOption.toUpperCase().equals("Q"))
+                return;
+            
+            // do the requested action and display the next view
+            done = this.doAction(gameMenuOption);
+            
+        } while (!done);
+    }
+    
+     private String getGameMenuOption() {
+       Scanner keyboard = new Scanner(System.in);
+       String value = ""; //value to be returned
+       boolean valid = false; // initialize to not valid
        
-       switch (value) {
+       while (!valid) {
+           System.out.println("\n" + this.gameMenu);
+           
+           value = keyboard.nextLine(); // get next line on keyboard
+           value = value.trim(); //trim off unncessary stuff
+           
+           if (value.length() < 1) { //value is blank
+               System.out.println("\n*** Captain! Give us some actual instructions! ***");
+               continue;
+               
+           } 
+           break;
+       }
+       return value;
+        
+    }
+    
+    private boolean doAction(String choice) {
+       choice = choice.toUpperCase();
+       
+       switch (choice) {
            case "M":
                this.viewMap();
                break;
@@ -66,7 +107,7 @@ public class GameMenuView extends View{
         ViewMapView viewMapView = new ViewMapView();
         
         // Display the view map view
-        viewMapView.displayMenu();
+        viewMapView.displayViewMapView();
     }
 
     private void viewCrew() {
@@ -84,9 +125,6 @@ public class GameMenuView extends View{
     private void viewShip() {
         System.out.println("\n *** viewShip () function called *** ");
     }
-
-
-
      
      
 }

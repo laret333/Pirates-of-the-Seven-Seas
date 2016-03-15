@@ -14,7 +14,7 @@ import java.util.Scanner;
  *
  * @author Tanner
  */
-public class StartProgramView extends View{
+public class StartProgramView {
     
     public void displayStartProgramView() {
         
@@ -55,16 +55,16 @@ public class StartProgramView extends View{
        }
        return value;
     }
-@Override
-    public boolean doAction(String value) {
+
+    private boolean doAction(String playersName) {
         
-        if (value.length() < 2) {
+        if (playersName.length() < 2) {
             System.out.println("\n*** Give us a name longer than one character, ye scurvy dog! ***");
             return false;
         }   
         
         // call creatPlayer() control funtion
-        Player player = GameControl.createPlayer(value);
+        Player player = GameControl.createPlayer(playersName);
         
         if (player == null) {
            System.out.println("\n*** Give us an actual name, Captain! ***");
@@ -120,11 +120,10 @@ public class StartProgramView extends View{
                          + "\n=====================================");
         
         // Create ViewMapView object 
-        MainMenuView mainMenuView = new MainMenuView(); 
-        
+        MainMenuView mainMenuView = new MainMenuView();
         
         // Display the main menu view
-        mainMenuView.display();
+        mainMenuView.displayMainMenuView();
         
     }
 

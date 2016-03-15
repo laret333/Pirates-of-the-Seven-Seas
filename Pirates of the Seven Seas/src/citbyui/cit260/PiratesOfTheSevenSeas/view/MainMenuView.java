@@ -14,12 +14,13 @@ import pirates.of.the.seven.seas.PiratesOfTheSevenSeas;
  *
  * @author Tanner
  */
-public class MainMenuView extends View {
+public class MainMenuView {
 
+    private String menu;
 
     
     public MainMenuView() {
-                    super("\n"
+        this.menu = "\n"
                   + "\n--------------------------------------------"
                   + "\n|                Main Menu                 |"
                   + "\n--------------------------------------------\n"
@@ -29,14 +30,53 @@ public class MainMenuView extends View {
                   + "   H - Help\n" 
                   + "   Q – Quit" 
                   + "\n--------------------------------------------"
-                    );
+                ;
                   
     }
     
     
-   
-    @Override
-    public boolean doAction(String choice) {
+    
+    public void displayMainMenuView() {
+        
+        boolean done = false; // set flag to not done
+        do {
+            
+            // prompt for and get players name
+            String menuOption = this.getMenuOption();
+            if (menuOption.toUpperCase().equals("Q"))
+                return;
+            
+            // do the requested action and display the next view
+            done = this.doAction(menuOption);
+            
+        } while (!done);
+        
+        
+    }
+
+    private String getMenuOption() {
+       Scanner keyboard = new Scanner(System.in);
+       String value = ""; //value to be returned
+       boolean valid = false; // initialize to not valid
+       
+       while (!valid) {
+           System.out.println("\n" + this.menu);
+           
+           value = keyboard.nextLine(); // get next line on keyboard
+           value = value.trim(); //trim off unncessary stuff
+           
+           if (value.length() < 1) { //value is blank
+               System.out.println("\n*** Captain! Give us some actual instructions! ***");
+               continue;
+               
+           }
+           break;
+       }
+       return value;
+        
+    }
+
+    private boolean doAction(String choice) {
        choice = choice.toUpperCase();
        
        switch (choice) {
@@ -67,7 +107,7 @@ public class MainMenuView extends View {
        
        // display the game menu
        GameMenuView gameMenu = new GameMenuView();
-       gameMenu.display();
+       gameMenu.displayGameMenu();
     }
 
     private void startLoadGame() {
@@ -84,14 +124,13 @@ public class MainMenuView extends View {
 
         //display the help menu
         
-        helpMenuView.displayMenu();
+        helpMenuView.displayHelpMenuView();
     }
 
     private HelpMenuView HelpMenuView() {
         System.out.println("\n *** helpMenuView () function called *** ");
         return null;
     }
-
 
 
     
