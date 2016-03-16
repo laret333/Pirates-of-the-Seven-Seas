@@ -44,26 +44,171 @@ public class MapControl {
 
         RandomScene startingScene = new RandomScene();
         startingScene.setDescription(
-                  "And we did come to the land which was called Bountiful, "
-                + "because of its much fruit and also wild honey; and all "
-                + "these things were prepared of the Lord that we might not "
-                + "perish. And we beheld the sea, which we called Irreantum, "
-                + "which, being interpreted, is many waters");
+                  "Argh Captain! Ye have arrived in the first sea. "
+                + "Ye must defeat all of the scalywagged enemies "
+                + "that dare try to stand against ye. "
+                + "There be a port to buy supplies, pirates to fight, "
+                + "and it looks like a poor trading ship to loot! ");
         
-        scenes[SceneIndex.fightEnemies.ordinal()] = startingScene;
+        startingScene.setMapSymbol(" ST ");
+        scenes[SceneIndex.startSea1.ordinal()] = startingScene;
 
-        // ...
+        // sea 2
+        RandomScene sea2 = new RandomScene();
+        sea2.setDescription(
+                  "Argh Captain! Ye have arrived in the second sea. "
+                + "Ye must defeat all of the scalywagged enemies "
+                + "that dare try to stand against ye. "
+                + "There be a port to buy supplies, pirates to fight, "
+                + "and what's that on the horizon? ");
+        
+        sea2.setMapSymbol(" S2 ");
+        scenes[SceneIndex.sea2.ordinal()] = sea2;
+        
+              
+        // sea3
+        RandomScene sea3 = new RandomScene();
+        sea3.setDescription(
+                  "Argh Captain! Ye have arrived in the third sea. "
+                + "Ye must defeat all of the scalywagged enemies "
+                + "that dare try to stand against ye. "
+                + "There be a port to buy supplies, pirates to fight, "
+                + "and what's that foggy area? Feeling adventurous? ");
+        
+        sea3.setMapSymbol(" S3 ");
+        scenes[SceneIndex.sea3.ordinal()] = sea3;
+        
+        // sea4
+        RandomScene sea4 = new RandomScene();
+        sea4.setDescription(
+                  "Argh Captain! Ye have arrived in the fourth sea. "
+                + "Ye must defeat all of the scalywagged enemies "
+                + "that dare try to stand against ye. "
+                + "There be a port to buy supplies, pirates to fight, "
+                + "and look and that tiny island! ");
+        
+        sea4.setMapSymbol(" S4 ");
+        scenes[SceneIndex.sea4.ordinal()] = sea4;
 
+        // sea5
+        RandomScene sea5 = new RandomScene();
+        sea5.setDescription(
+                  "Argh Captain! Ye have arrived in the fifth sea. "
+                + "Ye must defeat all of the scalywagged enemies "
+                + "that dare try to stand against ye. "
+                + "There be a port to buy supplies, pirates to fight, "
+                + "and there be indians on the horizon! ");
+        
+        sea5.setMapSymbol(" S5 ");
+        scenes[SceneIndex.sea5.ordinal()] = sea5;
+        
+        // sea6
+        RandomScene sea6 = new RandomScene();
+        sea6.setDescription(
+                  "Argh Captain! Ye have arrived in the sixth sea. "
+                + "Ye must defeat all of the scalywagged enemies "
+                + "that dare try to stand against ye. "
+                + "There be a port to buy supplies, pirates to fight, "
+                + "and there be a local navy! Shall we fight them, Cap'n? ");
+        
+        sea6.setMapSymbol(" S6 ");
+        scenes[SceneIndex.sea6.ordinal()] = sea6;
+        
+
+        // sea7
+        RandomScene sea7 = new RandomScene();
+        sea7.setDescription(
+                  "Argh Captain! Ye have quickly become a fearsome pirate! "
+                + "We are rich beyond all other pirates... except one! "
+                + "He owns this sea and has not been contested in years. "
+                + "The crew stands behind ye if ye choose to fight! "
+                + "But Captain, let us not overlook the port to buy supplies! ");
+        
+        sea7.setMapSymbol(" S7 ");
+        scenes[SceneIndex.sea7.ordinal()] = sea7;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         return scenes;
-
-
     }
 
     private static void assignScenesToLocations(Map map, RandomScene[] scenes) {
         Location[][] locations = map.getLocations();
 
         // start point
-        locations[0][0].setScene(scenes[SceneIndex.fightEnemies.ordinal()]);
+        locations[0][0].setScene(scenes[SceneIndex.startSea1.ordinal()]);
         // ....
         
     }

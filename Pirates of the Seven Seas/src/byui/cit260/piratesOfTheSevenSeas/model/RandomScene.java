@@ -14,7 +14,18 @@ import java.util.Objects;
  */
 public class RandomScene implements Serializable{
     private String description;
-
+    private String mapSymbol;
+    
+    
+        
+    
+    public RandomScene() {
+    }
+    
+    
+    
+    
+    
     public String getDescription() {
         return description;
     }
@@ -23,10 +34,19 @@ public class RandomScene implements Serializable{
         this.description = description;
     }
 
+    public String getMapSymbol() {
+        return mapSymbol;
+    }
+
+    public void setMapSymbol(String mapSymbol) {
+        this.mapSymbol = mapSymbol;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 73 * hash + Objects.hashCode(this.description);
+        hash = 79 * hash + Objects.hashCode(this.description);
+        hash = 79 * hash + Objects.hashCode(this.mapSymbol);
         return hash;
     }
 
@@ -45,18 +65,21 @@ public class RandomScene implements Serializable{
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
+        if (!Objects.equals(this.mapSymbol, other.mapSymbol)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "RandomScene{" + "description=" + description + '}';
+        return "RandomScene{" + "description=" + description + ", mapSymbol=" + mapSymbol + '}';
     }
 
-    
-    
-    public RandomScene() {
-    }
+
+
+
+
 
     
     

@@ -10,8 +10,15 @@ package byui.cit260.piratesOfTheSevenSeas.model;
  * @author jtemerson
  */
 public enum SceneIndex {
-    randomScene1,
-    randomScene2,
+    startSea1,
+    sea2,
+    sea3,
+    sea4,
+    sea5,
+    sea6,
+    sea7,
+    fogScene,
+    islandScene,
     fightPirateScene1,
     fightPirateScene2,
     fightPirateScene3,
