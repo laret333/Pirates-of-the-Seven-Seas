@@ -271,6 +271,87 @@ public class MapControl {
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // fogscene
+        RandomScene fogscene = new RandomScene();
+        fogscene.setDescription(
+                  "Captain, we can't sea a thing! "
+                + "Let's travel in and see what we find! ");
+        
+        fogscene.setMapSymbol(" FS ");
+        scenes[SceneIndex.fogScene.ordinal()] = fogscene;
+        
+        // islandscene
+        RandomScene islandscene = new RandomScene();
+        islandscene.setDescription(
+                  "An unchartered island, Captain! Let's see if we can find treasure! "
+                + "This does look like the lucky island we have all heard about! ");
+        
+        islandscene.setMapSymbol(" IS ");
+        scenes[SceneIndex.islandScene.ordinal()] = islandscene;
+        
+        // plunderTradingScene
+        RandomScene plunderTradingScene = new RandomScene();
+        plunderTradingScene.setDescription(
+                  "look, Captain, a measley little trading ship. "
+                + "I be willing to bet my knickers they are loaded with gold. ");
+        
+        plunderTradingScene.setMapSymbol(" PT ");
+        scenes[SceneIndex.plunderTradingScene.ordinal()] = plunderTradingScene;
+        
+        // indiansFoundScene
+        RandomScene indiansFoundScene = new RandomScene();
+        indiansFoundScene.setDescription(
+                  "Captain we have found a tribe of Indians! They look like they could be "
+                + "helpful to us. Let's see what's going on with them! ");
+        
+        indiansFoundScene.setMapSymbol(" IN ");
+        scenes[SceneIndex.indiansFoundScene.ordinal()] = indiansFoundScene;
+        
+        // fightNavyScene
+        RandomScene fightNavyScene = new RandomScene();
+        fightNavyScene.setDescription(
+                  "Captain, this navy looks strong. You know the pirate code:  "
+                + "Strong ship, strong source of income! ");
+        
+        fightNavyScene.setMapSymbol(" FN ");
+        scenes[SceneIndex.fightNavyScene.ordinal()] = fightNavyScene;
+        
+        // portScene
+        RandomScene portScene = new RandomScene();
+        portScene.setDescription(
+                  "Port, port, wonderful port! "
+                + "Let's buy some supplies and have some fun! ");
+        
+        portScene.setMapSymbol(" PT ");
+        scenes[SceneIndex.portScene.ordinal()] = portScene;   
+        
+        
         return scenes;
     }
 
