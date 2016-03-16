@@ -11,6 +11,7 @@ import byui.cit260.piratesOfTheSevenSeas.model.Item;
 import byui.cit260.piratesOfTheSevenSeas.model.ItemIndex;
 import byui.cit260.piratesOfTheSevenSeas.model.Map;
 import byui.cit260.piratesOfTheSevenSeas.model.Pirate;
+import byui.cit260.piratesOfTheSevenSeas.model.PirateIndex;
 import byui.cit260.piratesOfTheSevenSeas.model.Player;
 
 import pirates.of.the.seven.seas.PiratesOfTheSevenSeas;
@@ -30,6 +31,8 @@ public class GameControl {
     public GameControl() {
     }
 
+    
+    
 public static Player createPlayer(String name) {
         
         if (name == null) {
@@ -49,7 +52,7 @@ public static Player createPlayer(String name) {
              {
         
        Game game = new Game(); // create new game
-       PiratesOfTheSevenSeas.setCurrentGame(game); // save in CuriousWorkmanship
+       PiratesOfTheSevenSeas.setCurrentGame(game); // save in PiratesOfTheSevenSeas
        
        game.setPlayer(player); // save player in game
        
@@ -108,7 +111,83 @@ public static Player createPlayer(String name) {
     
     
     private static Pirate[] createPirates() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        
+         Game game = PiratesOfTheSevenSeas.getCurrentGame();
+
+        Pirate[] pirates = new Pirate[PirateIndex.values().length];
+        
+        //pirate1
+        
+        Pirate pirate1 = new Pirate();
+        
+        pirate1.setName(" Carleton Foul Forest ");
+        pirate1.setPiratePoints(100);
+        pirate1.setStatus(" pirate ");
+        pirates[PirateIndex.pirate1.ordinal()] = pirate1;
+        
+        //pirate1
+        
+        Pirate pirate2 = new Pirate();
+        
+        pirate2.setName(" Odel Rough-Dog Mountain ");
+        pirate2.setPiratePoints(100);
+        pirate2.setStatus(" pirate ");
+        pirates[PirateIndex.pirate2.ordinal()] = pirate2;
+        
+        //pirate3
+        
+        Pirate pirate3 = new Pirate();
+        
+        pirate3.setName(" Woodstock White Hair Drace ");
+        pirate3.setPiratePoints(100);
+        pirate3.setStatus(" pirate ");
+        pirates[PirateIndex.pirate3.ordinal()] = pirate3;
+        
+        
+        //pirate4
+        
+        Pirate pirate4 = new Pirate();
+        
+        pirate4.setName(" Clinton Crazy Snowedon ");
+        pirate4.setPiratePoints(100);
+        pirate4.setStatus(" pirate ");
+        pirates[PirateIndex.pirate4.ordinal()] = pirate4;
+        
+        
+        //pirate5
+        
+        Pirate pirate5 = new Pirate();
+        
+        pirate5.setName(" Darwin Drake ");
+        pirate5.setPiratePoints(100);
+        pirate5.setStatus(" pirate ");
+        pirates[PirateIndex.pirate5.ordinal()] = pirate5;
+        
+        
+        //pirate6
+        
+        Pirate pirate6 = new Pirate();
+        
+        pirate6.setName(" Taft Golden-hair Noire ");
+        pirate6.setPiratePoints(100);
+        pirate6.setStatus(" pirate ");
+        pirates[PirateIndex.pirate6.ordinal()] = pirate6;
+        
+        
+        //pirate7
+        
+        Pirate pirate7 = new Pirate();
+        
+        pirate7.setName(" Caden Foul Drake ");
+        pirate7.setPiratePoints(100);
+        pirate7.setStatus(" pirate ");
+        pirates[PirateIndex.pirate7.ordinal()] = pirate7;
+        
+        
+        
+        return pirates;
+
     }
         
   

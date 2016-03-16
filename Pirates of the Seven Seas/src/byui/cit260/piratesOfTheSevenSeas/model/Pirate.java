@@ -18,7 +18,6 @@ public class Pirate implements Serializable{
     
     private String name;
     private Integer piratePoints;
-    private Point coordinates;
     private String status;
 
     public Pirate() {
@@ -42,14 +41,6 @@ public class Pirate implements Serializable{
         this.piratePoints = piratePoints;
     }
 
-    public Point getCoordinates() {
-        return coordinates;
-    }
-
-    public void setCoordinates(Point coordinates) {
-        this.coordinates = coordinates;
-    }
-
     public String getStatus() {
         return status;
     }
@@ -63,7 +54,6 @@ public class Pirate implements Serializable{
         int hash = 3;
         hash = 89 * hash + Objects.hashCode(this.name);
         hash = 89 * hash + Objects.hashCode(this.piratePoints);
-        hash = 89 * hash + Objects.hashCode(this.coordinates);
         hash = 89 * hash + Objects.hashCode(this.status);
         return hash;
     }
@@ -89,20 +79,19 @@ public class Pirate implements Serializable{
         if (!Objects.equals(this.piratePoints, other.piratePoints)) {
             return false;
         }
-        if (!Objects.equals(this.coordinates, other.coordinates)) {
-            return false;
-        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Character{" + "name=" + name + ", piratePoints=" + piratePoints + ", coordinates=" + coordinates + ", status=" + status + '}';
+        return "Pirate{" + "name=" + name + ", piratePoints=" + piratePoints + ", status=" + status + '}';
     }
 
-    public void setCoordinates(int i, int i0) {
+    public void setDescription(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
             
     
     

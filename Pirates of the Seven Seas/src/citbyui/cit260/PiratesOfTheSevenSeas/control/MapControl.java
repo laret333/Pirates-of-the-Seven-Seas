@@ -127,19 +127,89 @@ public class MapControl {
         sea7.setMapSymbol(" S7 ");
         scenes[SceneIndex.sea7.ordinal()] = sea7;
         
+        //fightPirateScene1
         
+        RandomScene fightPirateScene1 = new RandomScene();
+        fightPirateScene1.setDescription(
+                  "Prepare yer crew for battle Captain! These Pirates "
+                + "look like a nasty bunch of brutes; but you can take them! "
+                + "Make suer that you have enough supplies and crew to win "
+                + "this battle! ");
         
+        fightPirateScene1.setMapSymbol(" P1 ");
+        scenes[SceneIndex.fightPirateScene1.ordinal()] = fightPirateScene1;
         
+        //fightPirateScene2
         
+        RandomScene fightPirateScene2 = new RandomScene();
+        fightPirateScene2.setDescription(
+                  "Prepare yer crew for battle Captain! These Pirates "
+                + "look like a nasty bunch of brutes; but you can take them! "
+                + "Make suer that you have enough supplies and crew to win "
+                + "this battle! ");
         
+        fightPirateScene2.setMapSymbol(" P2 ");
+        scenes[SceneIndex.fightPirateScene2.ordinal()] = fightPirateScene2;
         
+        //fightPirateScene3
         
+        RandomScene fightPirateScene3 = new RandomScene();
+        fightPirateScene3.setDescription(
+                  "Prepare yer crew for battle Captain! These Pirates "
+                + "look like a nasty bunch of brutes; but you can take them! "
+                + "Make suer that you have enough supplies and crew to win "
+                + "this battle! ");
         
+        fightPirateScene3.setMapSymbol(" P3 ");
+        scenes[SceneIndex.fightPirateScene3.ordinal()] = fightPirateScene3;
         
+        //fightPirateScene4
         
+        RandomScene fightPirateScene4 = new RandomScene();
+        fightPirateScene4.setDescription(
+                  "Prepare yer crew for battle Captain! These Pirates "
+                + "look like a nasty bunch of brutes; but you can take them! "
+                + "Make suer that you have enough supplies and crew to win "
+                + "this battle! ");
         
+        fightPirateScene4.setMapSymbol(" P4 ");
+        scenes[SceneIndex.fightPirateScene4.ordinal()] = fightPirateScene4;
         
+        //fightPirateScene5
         
+        RandomScene fightPirateScene5 = new RandomScene();
+        fightPirateScene5.setDescription(
+                  "Prepare yer crew for battle Captain! These Pirates "
+                + "look like a nasty bunch of brutes; but you can take them! "
+                + "Make suer that you have enough supplies and crew to win "
+                + "this battle! ");
+        
+        fightPirateScene5.setMapSymbol(" P5 ");
+        scenes[SceneIndex.fightPirateScene5.ordinal()] = fightPirateScene5;
+        
+        //fightPirateScene6
+        
+        RandomScene fightPirateScene6 = new RandomScene();
+        fightPirateScene6.setDescription(
+                  "Prepare yer crew for battle Captain! These Pirates "
+                + "look like a nasty bunch of brutes; but you can take them! "
+                + "Make suer that you have enough supplies and crew to win "
+                + "this battle! ");
+        
+        fightPirateScene6.setMapSymbol(" P6 ");
+        scenes[SceneIndex.fightPirateScene6.ordinal()] = fightPirateScene6;
+        
+        //fightPirateScene7
+        
+        RandomScene fightPirateScene7 = new RandomScene();
+        fightPirateScene7.setDescription(
+                  "Prepare yer crew for battle Captain! These Pirates "
+                + "look like a nasty bunch of brutes; but you can take them! "
+                + "Make suer that you have enough supplies and crew to win "
+                + "this battle! ");
+        
+        fightPirateScene7.setMapSymbol(" P7 ");
+        scenes[SceneIndex.fightPirateScene7.ordinal()] = fightPirateScene7;
         
         
         
