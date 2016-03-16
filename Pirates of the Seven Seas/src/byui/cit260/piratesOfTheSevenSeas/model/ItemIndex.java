@@ -12,6 +12,7 @@ package byui.cit260.piratesOfTheSevenSeas.model;
 public enum ItemIndex {
     gold,
     food,
-    cannons;
+    cannons,
+    crew;
     
 }

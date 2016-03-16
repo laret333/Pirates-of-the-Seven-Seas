@@ -85,7 +85,24 @@ public static Player createPlayer(String name) {
         inventory[ItemIndex.gold.ordinal()] = gold;
       
         // ...
-   
+        Item food = new Item();
+        food.setName("Food");
+        food.setAttribute("Food is needed to keep your crew healthy");
+        food.setPrice(1);
+        inventory[ItemIndex.food.ordinal()] = food;
+        
+        Item cannons = new Item();
+        cannons.setName("Cannons");
+        cannons.setAttribute("Cannons are needed to fight enemies");
+        cannons.setPrice(3);
+        inventory[ItemIndex.cannons.ordinal()] = cannons;
+        
+        Item crew = new Item();
+        crew.setName("Crew");
+        crew.setAttribute("The bigger your crew, the more you win");
+        crew.setPrice(2);
+        inventory[ItemIndex.crew.ordinal()] = crew;
+        
         return inventory;
     }
     
