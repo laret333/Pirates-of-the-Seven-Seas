@@ -334,7 +334,4 @@ public class FightEnemiesControlTest {
         
         assertEquals(expResult, result, 0);
     }
-    
 }
-    
-    
