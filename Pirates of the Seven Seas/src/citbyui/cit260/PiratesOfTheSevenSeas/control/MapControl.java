@@ -127,8 +127,7 @@ public class MapControl {
         sea7.setMapSymbol(" S7 ");
         scenes[SceneIndex.sea7.ordinal()] = sea7;
         
-        //fightPirateScene1
-        
+        //fightPirateScene1        
         RandomScene fightPirateScene1 = new RandomScene();
         fightPirateScene1.setDescription(
                   "Prepare yer crew for battle Captain! These Pirates "
@@ -139,8 +138,7 @@ public class MapControl {
         fightPirateScene1.setMapSymbol(" P1 ");
         scenes[SceneIndex.fightPirateScene1.ordinal()] = fightPirateScene1;
         
-        //fightPirateScene2
-        
+        //fightPirateScene2        
         RandomScene fightPirateScene2 = new RandomScene();
         fightPirateScene2.setDescription(
                   "Prepare yer crew for battle Captain! These Pirates "
@@ -151,8 +149,7 @@ public class MapControl {
         fightPirateScene2.setMapSymbol(" P2 ");
         scenes[SceneIndex.fightPirateScene2.ordinal()] = fightPirateScene2;
         
-        //fightPirateScene3
-        
+        //fightPirateScene3        
         RandomScene fightPirateScene3 = new RandomScene();
         fightPirateScene3.setDescription(
                   "Prepare yer crew for battle Captain! These Pirates "
@@ -163,8 +160,7 @@ public class MapControl {
         fightPirateScene3.setMapSymbol(" P3 ");
         scenes[SceneIndex.fightPirateScene3.ordinal()] = fightPirateScene3;
         
-        //fightPirateScene4
-        
+        //fightPirateScene4        
         RandomScene fightPirateScene4 = new RandomScene();
         fightPirateScene4.setDescription(
                   "Prepare yer crew for battle Captain! These Pirates "
@@ -175,8 +171,7 @@ public class MapControl {
         fightPirateScene4.setMapSymbol(" P4 ");
         scenes[SceneIndex.fightPirateScene4.ordinal()] = fightPirateScene4;
         
-        //fightPirateScene5
-        
+        //fightPirateScene5        
         RandomScene fightPirateScene5 = new RandomScene();
         fightPirateScene5.setDescription(
                   "Prepare yer crew for battle Captain! These Pirates "
@@ -187,8 +182,7 @@ public class MapControl {
         fightPirateScene5.setMapSymbol(" P5 ");
         scenes[SceneIndex.fightPirateScene5.ordinal()] = fightPirateScene5;
         
-        //fightPirateScene6
-        
+        //fightPirateScene6        
         RandomScene fightPirateScene6 = new RandomScene();
         fightPirateScene6.setDescription(
                   "Prepare yer crew for battle Captain! These Pirates "
@@ -200,7 +194,6 @@ public class MapControl {
         scenes[SceneIndex.fightPirateScene6.ordinal()] = fightPirateScene6;
         
         //fightPirateScene7
-        
         RandomScene fightPirateScene7 = new RandomScene();
         fightPirateScene7.setDescription(
                   "Prepare yer crew for battle Captain! These Pirates "
@@ -210,91 +203,6 @@ public class MapControl {
         
         fightPirateScene7.setMapSymbol(" P7 ");
         scenes[SceneIndex.fightPirateScene7.ordinal()] = fightPirateScene7;
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         // fogscene
@@ -364,9 +272,11 @@ public class MapControl {
         
     }
 
-    static void movePiratesToStartingLocation(Map map, Pirate[] actors) {
+    static void movePiratesToStartingLocation(Map map, Pirate[] pirates) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
 
     
 

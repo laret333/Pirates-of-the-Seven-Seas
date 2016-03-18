@@ -41,7 +41,7 @@ public class PlunderTradingView extends View{
        //get users imput
        String strCannon = this.getInput();
        //convert value to int and assign to cannons
-        int strCannon = Integer.parseInt(viewCannonsInput);
+        int intCannon = Integer.parseInt(strCannon);
         
        
         String cannons = null;
