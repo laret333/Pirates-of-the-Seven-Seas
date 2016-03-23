@@ -104,7 +104,7 @@ public class FightEnemiesControl {
       return 1;  
     }
 
-    public static double plunderTrading(int crewPoints, int cannons) {
+    public static double plunderTrading(int crewPoints, int cannons) throws FightEnemiesControlException {
         
         
         // TEMPORARY CODE UNTIL GAME IS CREATED
@@ -117,16 +117,16 @@ public class FightEnemiesControl {
         
 
         if (crewPoints < 1 ) {
-            return -1;
+            throw new FightEnemiesControlException("Cannot fight because you only have " + crewPoints + "crew!");
         }
         
         
         if (shipHealth < 1 ) {
-            return -1;
+            throw new FightEnemiesControlException("Cannot fight because you only have don't have enough Ship Health!");
         }
 	
 	if (cannons < 1 ) {
-            return -1;
+            throw new FightEnemiesControlException("Cannot fight because you only have " + cannons + "cannons!");
         }
         
 	int victoryPoints = crewPoints * (cannons + shipHealth);
