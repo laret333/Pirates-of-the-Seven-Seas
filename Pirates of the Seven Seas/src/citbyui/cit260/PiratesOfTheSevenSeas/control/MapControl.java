@@ -273,7 +273,12 @@ public class MapControl {
     }
 
     static void movePiratesToStartingLocation(Map map, Pirate[] pirates) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("movePiratesToStartingLocation stub function called");
+        
+//        map = PiratesOfTheSevenSeas.getCurrentGame().getMap();
+//        int newRow = coordinates.x-1;
+        
+        
     }
 
     

@@ -6,7 +6,10 @@
 package citbyui.cit260.PiratesOfTheSevenSeas.view;
 
 import citbyui.cit260.PiratesOfTheSevenSeas.control.FightEnemiesControl;
+import citbyui.cit260.PiratesOfTheSevenSeas.exceptions.FightEnemiesControlException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -45,7 +48,13 @@ public class FightPiratesView extends View{
        String viewCannonsInput = this.getInput();
        int cannonsInt = Integer.parseInt(viewCannonsInput);
        
-       int victoryPoints = FightEnemiesControl.fightPirates(crewInt, cannonsInt);
+       int victoryPoints;
+        try {
+            victoryPoints = FightEnemiesControl.fightPirates(crewInt, cannonsInt);
+        } catch (FightEnemiesControlException ex) {
+            System.out.println(ex.getMessage());
+            return true;
+        }
        
        if (victoryPoints > 1019) {
            System.out.println("\n\nCongrats, Captain! We've won our first battle!!!");

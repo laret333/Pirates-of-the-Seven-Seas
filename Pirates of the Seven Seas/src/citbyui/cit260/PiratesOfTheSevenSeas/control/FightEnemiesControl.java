@@ -7,6 +7,7 @@ package citbyui.cit260.PiratesOfTheSevenSeas.control;
 
 import byui.cit260.piratesOfTheSevenSeas.model.Pirate;
 import byui.cit260.piratesOfTheSevenSeas.model.Ship;
+import citbyui.cit260.PiratesOfTheSevenSeas.exceptions.FightEnemiesControlException;
 
 /**
  *
@@ -14,21 +15,23 @@ import byui.cit260.piratesOfTheSevenSeas.model.Ship;
  */
 public class FightEnemiesControl {
 
+    
+    
     private static int crewPoints;
     private static int cannons;
-    public static int indiansFound(int gold, int food, int cannons) { 
+    public static int indiansFound(int gold, int food, int cannons) throws FightEnemiesControlException { 
 
     	
 	if (gold < 1 ) {
-            return -1;
+            throw new FightEnemiesControlException("Cannot fight because you only have " + gold + "gold!");
         }
         
         if (food < 1 ) {
-            return -1;
+            throw new FightEnemiesControlException("Cannot fight because you only have " + food + "food!");
         }
 	
 	if (cannons < 1 ) {
-            return -1;
+            throw new FightEnemiesControlException("Cannot fight because you only have " + cannons + "cannons!");
         }
         
 	int victoryPoints = gold * (food + cannons);
@@ -37,7 +40,7 @@ public class FightEnemiesControl {
         
 
     }
-    public static int fightPirates(int crewPoints, int cannons) { 
+    public static int fightPirates(int crewPoints, int cannons) throws FightEnemiesControlException { 
 
         // TEMPORARY CODE UNTIL GAME IS CREATED
         Ship ship = new Ship();
@@ -49,21 +52,25 @@ public class FightEnemiesControl {
         
 
         if (crewPoints < 1 ) {
-            return -1;
+           throw new FightEnemiesControlException("Cannot fight because you only have " + crewPoints + "crew!");
         }
         
         
         if (shipHealth < 1 ) {
-            return -1;
+            throw new FightEnemiesControlException("Cannot fight because you only have don't have enough Ship Health!");
         }
 	
 	if (cannons < 1 ) {
-            return -1;
+            throw new FightEnemiesControlException("Cannot fight because you only have " + cannons + "cannons!");
         }
         
 	int victoryPoints = crewPoints * (cannons + shipHealth);
 
-	return victoryPoints;
+	
+        
+        
+        
+        return victoryPoints;
         
 
     }
