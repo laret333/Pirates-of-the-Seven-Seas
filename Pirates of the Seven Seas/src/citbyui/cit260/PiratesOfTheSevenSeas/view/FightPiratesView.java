@@ -46,7 +46,16 @@ public class FightPiratesView extends View{
        System.out.println("You  have " + cannons + " cannons to fight with!\n\n"
                             +"How many cannons would you like to use?");
        String viewCannonsInput = this.getInput();
+       
        int cannonsInt = Integer.parseInt(viewCannonsInput);
+       
+       try {
+           cannonsInt = Integer.parseInt(viewCannonsInput);
+       } catch (NumberFormatException nf) {
+           System.out.println("\n Enter here and die, peasant. ");
+           return true;
+       }
+       
        
        int victoryPoints;
         try {

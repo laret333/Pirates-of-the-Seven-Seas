@@ -44,7 +44,15 @@ public class PiratesOfTheSevenSeas {
     public static void main(String[] args) {
         
         StartProgramView startProgramView = new StartProgramView();
-        startProgramView.displayStartProgramView();
+        
+        try {
+            startProgramView.displayStartProgramView();
+        } catch (Throwable te) {
+                System.out.println(te.getMessage());
+                te.printStackTrace();
+                startProgramView.display();
+        }
+        
         
         
     }   
