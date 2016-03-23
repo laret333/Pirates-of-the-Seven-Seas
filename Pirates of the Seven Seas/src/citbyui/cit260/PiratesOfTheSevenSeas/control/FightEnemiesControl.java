@@ -104,7 +104,7 @@ public class FightEnemiesControl {
       return 1;  
     }
 
-    public static double plunderTrading(int crewPoints, int cannons) throws FightEnemiesControlException {
+    public static int plunderTrading(int crewPoints, int cannons) throws FightEnemiesControlException {
         
         
         // TEMPORARY CODE UNTIL GAME IS CREATED

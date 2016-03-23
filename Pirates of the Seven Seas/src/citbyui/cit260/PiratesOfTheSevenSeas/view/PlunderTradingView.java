@@ -6,7 +6,10 @@
 package citbyui.cit260.PiratesOfTheSevenSeas.view;
 
 import citbyui.cit260.PiratesOfTheSevenSeas.control.FightEnemiesControl;
+import citbyui.cit260.PiratesOfTheSevenSeas.exceptions.FightEnemiesControlException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -52,7 +55,20 @@ public class PlunderTradingView extends View{
        String viewCannonsInput = this.getInput();
        int cannonsInt = Integer.parseInt(viewCannonsInput);
        
-       double victoryPoints = FightEnemiesControl.plunderTrading(crewInt, cannonsInt);
+       try {
+           cannonsInt = Integer.parseInt(viewCannonsInput);
+       } catch (NumberFormatException nf) {
+           System.out.println("\n Enter here and die, peasant. ");
+           return true;
+       }
+       
+       int victoryPoints;
+        try {
+            victoryPoints = FightEnemiesControl.plunderTrading(crewInt, cannonsInt);
+        } catch (FightEnemiesControlException ex) {
+            System.out.println(ex.getMessage());
+            return true;
+        }
        
        if (victoryPoints > 1019) {
            System.out.println("\n\nCongrats, Captain! We've won our first battle!!!");
