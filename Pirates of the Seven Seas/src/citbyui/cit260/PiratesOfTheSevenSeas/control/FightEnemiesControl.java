@@ -74,19 +74,19 @@ public class FightEnemiesControl {
         
 
     }
-    public static int fightNavy(int crewPoints, int shipHealth, int cannons) {
+    public static int fightNavy(int crewPoints, int shipHealth, int cannons) throws FightEnemiesControlException{
 
     	
 	if (shipHealth < 100 ) {
-            return -1;
+           throw new FightEnemiesControlException("Cannot fight because you only have " + shipHealth + "Ship Health!");
         }
         
         if (cannons < 1 ) {
-            return -1;
+           throw new FightEnemiesControlException("Cannot fight because you only have " + cannons + "cannons!");
         }
 	
 	if (crewPoints < 10 ) {
-            return -1;
+           throw new FightEnemiesControlException("Cannot fight because you only have " + crewPoints + "crew!");
         }
         
 	int victoryPoints = shipHealth * (crewPoints + cannons);
