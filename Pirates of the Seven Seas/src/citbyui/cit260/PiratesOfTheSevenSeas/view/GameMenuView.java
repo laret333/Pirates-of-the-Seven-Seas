@@ -53,7 +53,7 @@ public class GameMenuView extends View{
                this.viewShip();
                break;
             default:
-                System.out.println("\n*** Arg! Ye have chosen that which exists not! ***\n"
+                this.console.println("\n*** Arg! Ye have chosen that which exists not! ***\n"
                         + "    *** Belay that choice, and try again! ***");
                 break;
        }
@@ -70,19 +70,19 @@ public class GameMenuView extends View{
     }
 
     private void viewCrew() {
-        System.out.println("\n *** viewCrew () function called *** ");
+        this.console.println("\n *** viewCrew () function called *** ");
     }
 
     private void viewInventory() {
-        System.out.println("\n *** viewInventory () function called *** ");
+        this.console.println("\n *** viewInventory () function called *** ");
     }
 
     private void viewFleet() {
-        System.out.println("\n *** viewFleet () function called *** ");
+        this.console.println("\n *** viewFleet () function called *** ");
     }
 
     private void viewShip() {
-        System.out.println("\n *** viewShip () function called *** ");
+        this.console.println("\n *** viewShip () function called *** ");
     }
 
 

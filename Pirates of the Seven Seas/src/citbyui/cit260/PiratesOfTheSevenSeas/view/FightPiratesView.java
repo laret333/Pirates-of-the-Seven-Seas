@@ -43,7 +43,7 @@ public class FightPiratesView extends View{
        
        int crewInt = Integer.parseInt(value);
        
-       System.out.println("You  have " + cannons + " cannons to fight with!\n\n"
+       this.console.println("You  have " + cannons + " cannons to fight with!\n\n"
                             +"How many cannons would you like to use?");
        String viewCannonsInput = this.getInput();
        
@@ -52,7 +52,7 @@ public class FightPiratesView extends View{
        try {
            cannonsInt = Integer.parseInt(viewCannonsInput);
        } catch (NumberFormatException nf) {
-           System.out.println("\n Enter here and die, peasant. ");
+           this.console.println("\n Enter here and die, peasant. ");
            return true;
        }
        
@@ -61,12 +61,12 @@ public class FightPiratesView extends View{
         try {
             victoryPoints = FightEnemiesControl.fightPirates(crewInt, cannonsInt);
         } catch (FightEnemiesControlException ex) {
-            System.out.println(ex.getMessage());
+            this.console.println(ex.getMessage());
             return true;
         }
        
        if (victoryPoints > 1019) {
-           System.out.println("\n\nCongrats, Captain! We've won our first battle!!!");
+           this.console.println("\n\nCongrats, Captain! We've won our first battle!!!");
             // Create ViewMapView object 
         ViewMapView viewMapView = new ViewMapView();
         
@@ -74,7 +74,7 @@ public class FightPiratesView extends View{
         viewMapView.display();   
            
        } else {
-           System.out.println("\n\nArg, Captain, we've been beat like yellow-bellied scallywags.\n"
+           this.console.println("\n\nArg, Captain, we've been beat like yellow-bellied scallywags.\n"
                                + "We'll need to buy some more supplies at the port in order to win!");
             // Create ViewMapView object 
         ViewMapView viewMapView = new ViewMapView();

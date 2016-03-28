@@ -8,7 +8,10 @@ package citbyui.cit260.PiratesOfTheSevenSeas.view;
 
 import byui.cit260.piratesOfTheSevenSeas.model.Player;
 import citbyui.cit260.PiratesOfTheSevenSeas.control.GameControl;
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -36,22 +39,28 @@ public class StartProgramView extends View{
     }
         
     private String getPlayersName() {
-       Scanner keyboard = new Scanner(System.in);
+      
        String value = ""; //value to be returned
        boolean valid = false; // initialize to not valid
        
        while (!valid) {
-           System.out.println("\n" + this.promptMessage);
-           
-           value = keyboard.nextLine(); // get next line on keyboard
-           value = value.trim(); //trim off unncessary stuff
-           
-           if (value.length() < 1) { //value is blank
-               System.out.println("\nInvalid value: Value cannot be blank");
-               continue;
+           try {
+               this.console.println("\n" + this.promptMessage);
                
+               value = this.keyboard.readLine(); // get next line on keyboard
+               value = value.trim(); //trim off unncessary stuff
+               
+               if (value.length() < 1) { //value is blank
+                   ErrorView.display(this.getClass().getName(),
+                           "\nInvalid value: Value cannot be blank");
+                   continue;
+                   
+               }
+               break;
+           } catch (IOException ex) {
+               ErrorView.display(this.getClass().getName(),
+                       "You must enter a value.");
            }
-           break;
        }
        return value;
     }
@@ -59,7 +68,8 @@ public class StartProgramView extends View{
     public boolean doAction(String value) {
         
         if (value.length() < 2) {
-            System.out.println("\n*** Give us a name longer than one character, ye scurvy dog! ***");
+             ErrorView.display(this.getClass().getName(),
+                     "\n*** Give us a name longer than one character, ye scurvy dog! ***");
             return false;
         }   
         
@@ -67,7 +77,8 @@ public class StartProgramView extends View{
         Player player = GameControl.createPlayer(value);
         
         if (player == null) {
-           System.out.println("\n*** Give us an actual name, Captain! ***");
+            ErrorView.display(this.getClass().getName(),
+                    "\n*** Give us an actual name, Captain! ***");
            return false; 
         }
         
@@ -90,7 +101,7 @@ public class StartProgramView extends View{
 
     private void displayBanner() {
         
-        System.out.println(
+        this.console.println(
               "\n************************************************************"
             + "\n* Welcome!                                                 *"
             + "\n*                                                          *"
@@ -114,7 +125,7 @@ public class StartProgramView extends View{
     
 
     private void displayNextView(Player player) {
-        System.out.println("\n====================================="
+        this.console.println("\n====================================="
                          + "\n Welcome to the game, Captain " + player.getName() + "!"
                          + "\n Get out there and claim yer seas!"
                          + "\n=====================================");

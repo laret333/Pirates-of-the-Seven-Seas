@@ -53,7 +53,7 @@ public class MainMenuView extends View {
                this.startHelpMenu();
                break;
             default:
-                System.out.println("\n*** Arg! Ye have chosen that which exists not! ***\n"
+                this.console.println("\n*** Arg! Ye have chosen that which exists not! ***\n"
                         + "    *** Belay that choice, and try again! ***");
                 break;
        }
@@ -71,11 +71,38 @@ public class MainMenuView extends View {
     }
 
     private void startLoadGame() {
-        System.out.println("\n*** startLoadGame() function called ***");
+        this.console.println("\nEneter the file path for the file where the "
+                           + "game was saved.");
+        
+        String filePath = this.getInput();
+        
+        try {
+            GameControl.getSavedGame(filePath);
+        } catch(Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
+        
+        
     }
 
     private void startSaveGame() {
-        System.out.println("\n*** startSaveGame() function called ***");
+        this.console.println("\nEneter the file path for the file where the "
+                           + "game is to be saved.");
+        
+        String filePath = this.getInput();
+        
+        try {
+            GameControl.saveGame(PiratesOfTheSevenSeas.getCurrentGame(), filePath);
+        } catch(Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
+        
     }
 
     private void startHelpMenu() {
@@ -88,7 +115,7 @@ public class MainMenuView extends View {
     }
 
     private HelpMenuView HelpMenuView() {
-        System.out.println("\n *** helpMenuView () function called *** ");
+        this.console.println("\n *** helpMenuView () function called *** ");
         return null;
     }
 

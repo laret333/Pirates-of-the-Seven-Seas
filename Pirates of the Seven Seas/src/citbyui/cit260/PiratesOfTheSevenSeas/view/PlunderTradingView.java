@@ -38,7 +38,7 @@ public class PlunderTradingView extends View{
        
        
        
-       System.out.println("\n"
+       this.console.println("\n"
                   + "How many cannons do you want in battle?\n"  );
        
        //get users imput
@@ -58,7 +58,7 @@ public class PlunderTradingView extends View{
        try {
            cannonsInt = Integer.parseInt(viewCannonsInput);
        } catch (NumberFormatException nf) {
-           System.out.println("\n Enter here and die, peasant. ");
+           this.console.println("\n Enter here and die, peasant. ");
            return true;
        }
        
@@ -66,12 +66,12 @@ public class PlunderTradingView extends View{
         try {
             victoryPoints = FightEnemiesControl.plunderTrading(crewInt, cannonsInt);
         } catch (FightEnemiesControlException ex) {
-            System.out.println(ex.getMessage());
+            this.console.println(ex.getMessage());
             return true;
         }
        
        if (victoryPoints > 1019) {
-           System.out.println("\n\nCongrats, Captain! We've won our first battle!!!");
+           this.console.println("\n\nCongrats, Captain! We've won our first battle!!!");
             // Create ViewMapView object 
         ViewMapView viewMapView = new ViewMapView();
         
@@ -79,7 +79,7 @@ public class PlunderTradingView extends View{
         viewMapView.displayMenu();   
            
        } else {
-           System.out.println("\n\nArg, Captain, we've been beat like yellow-bellied scallywags.\n"
+           this.console.println("\n\nArg, Captain, we've been beat like yellow-bellied scallywags.\n"
                                + "We'll need to buy some more supplies at the port in order to win!");
             // Create ViewMapView object 
         ViewMapView viewMapView = new ViewMapView();

@@ -53,7 +53,7 @@ public class HelpMenuView extends View{
                this.mapMovement();
                break;
             default:
-                System.out.println("\n*** Arg! Ye have chosen that which exists not! ***\n"
+                this.console.println("\n*** Arg! Ye have chosen that which exists not! ***\n"
                         + "    *** Belay that choice, and try again! ***");
                 break;
        }
@@ -62,23 +62,23 @@ public class HelpMenuView extends View{
     }
 
     private void overviewOfGame() {
-        System.out.println("\n*** overviewOfGame() function called ***");
+        this.console.println("\n*** overviewOfGame() function called ***");
     }
 
     private void inventoryQuestions() {
-        System.out.println("\n*** inventoryQuestions() function called ***");
+        this.console.println("\n*** inventoryQuestions() function called ***");
     }
 
     private void crewMembers() {
-        System.out.println("\n*** crewMembers() function called ***");
+        this.console.println("\n*** crewMembers() function called ***");
     }
 
     private void shipAndFleet() {
-        System.out.println("\n*** shipAndFleet() function called ***");
+        this.console.println("\n*** shipAndFleet() function called ***");
     }
 
     private void mapMovement() {
-        System.out.println("\n*** mapMovement() function called ***");
+        this.console.println("\n*** mapMovement() function called ***");
     }
 
     void displayMenu() {

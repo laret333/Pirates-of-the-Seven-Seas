@@ -46,7 +46,7 @@ public class ViewMapView extends View{
                break;
             
             default:
-                System.out.println("\n*** Arg! Ye have chosen that which exists not! ***\n"
+                this.console.println("\n*** Arg! Ye have chosen that which exists not! ***\n"
                         + "    *** Belay that choice, and try again! ***");
                 break;
        }
@@ -64,7 +64,7 @@ public class ViewMapView extends View{
     }
 
     private void explore() {
-        System.out.println("\n*** startexplore() function called ***");
+        this.console.println("\n*** startexplore() function called ***");
     }
 
     private void fightPirates() {

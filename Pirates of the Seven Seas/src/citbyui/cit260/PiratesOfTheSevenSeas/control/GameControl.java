@@ -13,6 +13,11 @@ import byui.cit260.piratesOfTheSevenSeas.model.Map;
 import byui.cit260.piratesOfTheSevenSeas.model.Pirate;
 import byui.cit260.piratesOfTheSevenSeas.model.PirateIndex;
 import byui.cit260.piratesOfTheSevenSeas.model.Player;
+import citbyui.cit260.PiratesOfTheSevenSeas.exceptions.GameControlException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import pirates.of.the.seven.seas.PiratesOfTheSevenSeas;
 
@@ -25,7 +30,34 @@ import pirates.of.the.seven.seas.PiratesOfTheSevenSeas;
 
 public class GameControl {
 
+    public static void saveGame(Game currentGame, String filePath) throws GameControlException {
+        
+        try( FileOutputStream fops = new FileOutputStream(filePath)) {
+            ObjectOutputStream output = ObjectOutputStream(fops);
+            
+            output.writeObject(currentGame); // write the game object out to file
+            
+        } catch (Exception ex) {
+            throw new GameControlException(ex.getMessage());
+        }
+        
+    }
 
+    public static void getSavedGame(String filePath) throws GameControlException {
+        
+        Game game = null;
+        
+        try( FileOutputStream fips = new FileOutputStream(filePath)) {
+            ObjectOutputStream input = ObjectOutputStream(fips);
+            
+            game = (Game) input.readObject(); // write the game object out to file
+            
+        } catch (Exception ex) {
+            throw new GameControlException(ex.getMessage());
+        }
+        
+    PiratesOfTheSevenSeas.setCurrentGame(game);
+    }
   
     
     public GameControl() {
