@@ -71,7 +71,7 @@ public class MainMenuView extends View {
     }
 
     private void startLoadGame() {
-        this.console.println("\nEneter the file path for the file where the "
+        this.console.println("\nEnter the file path for the file where the "
                            + "game was saved.");
         
         String filePath = this.getInput();
