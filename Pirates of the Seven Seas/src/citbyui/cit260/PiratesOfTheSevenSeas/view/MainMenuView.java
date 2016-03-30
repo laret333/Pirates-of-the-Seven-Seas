@@ -28,6 +28,7 @@ public class MainMenuView extends View {
                   + "   S – Save Game\n" 
                   + "   H - Help\n" 
                   + "   Q – Quit" 
+                  + "   P – Print"          
                   + "\n--------------------------------------------"
                     );
                   
@@ -51,6 +52,9 @@ public class MainMenuView extends View {
                break;
             case"H":
                this.startHelpMenu();
+               break;
+            case"P":
+               this.printThis();
                break;
             default:
                 this.console.println("\n*** Arg! Ye have chosen that which exists not! ***\n"
@@ -117,6 +121,11 @@ public class MainMenuView extends View {
     private HelpMenuView HelpMenuView() {
         this.console.println("\n *** helpMenuView () function called *** ");
         return null;
+    }
+
+    private void printThis() {
+        this.console.println("\n *** helpMenuView () function called *** ");
+        
     }
 
 
