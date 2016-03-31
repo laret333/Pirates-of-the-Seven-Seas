@@ -70,7 +70,11 @@ public class GameMenuView extends View{
     }
 
     private void viewCrew() {
-        this.console.println("\n *** viewCrew () function called *** ");
+        // Create ViewMapView object 
+        ViewCrewView viewCrewView = new ViewCrewView();
+        
+        // Display the view map view
+        viewCrewView.displayMenu();
     }
 
     private void viewInventory() {
@@ -82,7 +86,11 @@ public class GameMenuView extends View{
     }
 
     private void viewShip() {
-        this.console.println("\n *** viewShip () function called *** ");
+        // Create ViewMapView object 
+        ViewShipView viewShipView = new ViewShipView();
+        
+        // Display the view map view
+        viewShipView.displayMenu();
     }
 
 

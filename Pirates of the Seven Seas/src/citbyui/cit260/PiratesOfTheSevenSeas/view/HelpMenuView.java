@@ -70,7 +70,11 @@ public class HelpMenuView extends View{
     }
 
     private void crewMembers() {
-        this.console.println("\n*** crewMembers() function called ***");
+        // Create ViewMapView object 
+        ViewCrewView viewCrewView = new ViewCrewView();
+        
+        // Display the view map view
+        viewCrewView.displayMenu();
     }
 
     private void shipAndFleet() {
@@ -78,7 +82,11 @@ public class HelpMenuView extends View{
     }
 
     private void mapMovement() {
-        this.console.println("\n*** mapMovement() function called ***");
+        // Create ViewMapView object 
+        MapMovementView mapMovementView = new MapMovementView();
+        
+        // Display the view map view
+        mapMovementView.displayMenu();
     }
 
     void displayMenu() {
