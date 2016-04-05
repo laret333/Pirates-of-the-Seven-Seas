@@ -81,9 +81,7 @@ public class HelpMenuView extends View{
         this.console.println("\n*** mapMovement() function called ***");
     }
 
-    void displayMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
  
 }
