@@ -7,33 +7,24 @@ package citbyui.cit260.PiratesOfTheSevenSeas.view;
 
 import citbyui.cit260.PiratesOfTheSevenSeas.control.FightEnemiesControl;
 import citbyui.cit260.PiratesOfTheSevenSeas.exceptions.FightEnemiesControlException;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 
 /**
  *
- * @author Tanner
+ * @author Owner
  */
-public class FightPiratesView extends View {
+public class IndiansView extends View {
 
-    
-
-   
-
-    public FightPiratesView(String promptMessage) {
+    public IndiansView(String promptMessage) {
         super(promptMessage);
         
     }
-
     
-   
+    
+    
     @Override
-   public boolean doAction(String value) {
-       
-       
-        int cannons = 2;
+    public boolean doAction(String value) {
+       int cannons = 2;
+       int foodInt = 10;
        
        int crewInt = Integer.parseInt(value);
        
@@ -53,14 +44,14 @@ public class FightPiratesView extends View {
        
        int victoryPoints;
         try {
-            victoryPoints = FightEnemiesControl.fightPirates(crewInt, cannonsInt);
+            victoryPoints = FightEnemiesControl.indiansFound(crewInt, cannonsInt, foodInt);
         } catch (FightEnemiesControlException ex) {
             this.console.println(ex.getMessage());
             return true;
         }
        
        if (victoryPoints > 1019) {
-           this.console.println("\n\nCongrats, Captain! We've won our first battle!!!");
+           this.console.println("\n\nCongrats, Captain! We've won the allegiance of the Indians!!!");
             // Create ViewMapView object 
         ViewMapView viewMapView = new ViewMapView();
         
@@ -68,7 +59,7 @@ public class FightPiratesView extends View {
         viewMapView.display();   
            
        } else {
-           this.console.println("\n\nArg, Captain, we've been beat like yellow-bellied scallywags.\n"
+           this.console.println("\n\nArg, The Indians certainly have their land claimed.\n"
                                + "We'll need to buy some more supplies at the port in order to win!");
             // Create ViewMapView object 
         ViewMapView viewMapView = new ViewMapView();
@@ -78,7 +69,6 @@ public class FightPiratesView extends View {
        }
        
        return false;
-    } 
     }
     
-
+}

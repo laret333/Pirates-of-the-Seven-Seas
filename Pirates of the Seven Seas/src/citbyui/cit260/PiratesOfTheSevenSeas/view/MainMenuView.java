@@ -112,19 +112,14 @@ public class MainMenuView extends View {
     private void startHelpMenu() {
         // Create MainMenuView object 
         HelpMenuView helpMenuView = new HelpMenuView();
-
         //display the help menu
-        
-        helpMenuView.displayMenu();
+        helpMenuView.display();
     }
 
-    private HelpMenuView HelpMenuView() {
-        this.console.println("\n *** helpMenuView () function called *** ");
-        return null;
-    }
+
 
     private void printThis() {
-        this.console.println("\n *** helpMenuView () function called *** ");
+        this.console.println("\n *** print function called *** ");
         
     }
 
